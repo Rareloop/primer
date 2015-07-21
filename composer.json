@@ -1,0 +1,10 @@
+{
+    "name": "rareloop/primer",
+    "minimum-stability": "dev",
+
+
+    "require": {
+        "rareloop/primer-core": "dev-master",
+        "altorouter/altorouter": "1.1.0"
+    }
+}

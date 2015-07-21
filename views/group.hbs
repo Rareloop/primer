@@ -1,0 +1,12 @@
+<div class="primer-group" data-id="{{id}}">
+	<div class="primer-group__header">
+		<div class="primer-group__title">{{title}}</div>
+		<div class="primer-group__actions">
+			<a class="primer-group__link" href="/patterns/{{id}}" title="Show this group on its own">#</a>
+		</div>
+	</div>
+	{{#if copy}}
+		<div class="primer-group__copy">{{{copy}}}</div>
+	{{/if}}
+	{{{patterns}}}
+</div>

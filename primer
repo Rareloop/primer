@@ -1,0 +1,10 @@
+#!/usr/bin/env php
+<?php
+
+require 'vendor/autoload.php';
+
+$patternLab = require_once __DIR__.'/bootstrap/start.php';
+
+use Rareloop\Primer\Cli;
+
+Cli::run();
