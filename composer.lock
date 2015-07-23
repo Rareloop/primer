@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "82ca609560f41dafbfb68aee8838743b",
+    "hash": "81c670b2de4494a59991ad706e51d1d0",
     "packages": [
         {
             "name": "altorouter/altorouter",
@@ -104,16 +104,16 @@
         },
         {
             "name": "michelf/php-markdown",
-            "version": "dev-lib",
+            "version": "1.5.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/michelf/php-markdown.git",
-                "reference": "942bf343ddc80b06b1bd43c452ffd58a1e357df6"
+                "reference": "e1aabe18173231ebcefc90e615565742fc1c7fd9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/michelf/php-markdown/zipball/942bf343ddc80b06b1bd43c452ffd58a1e357df6",
-                "reference": "942bf343ddc80b06b1bd43c452ffd58a1e357df6",
+                "url": "https://api.github.com/repos/michelf/php-markdown/zipball/e1aabe18173231ebcefc90e615565742fc1c7fd9",
+                "reference": "e1aabe18173231ebcefc90e615565742fc1c7fd9",
                 "shasum": ""
             },
             "require": {
@@ -136,14 +136,14 @@
             ],
             "authors": [
                 {
+                    "name": "John Gruber",
+                    "homepage": "http://daringfireball.net/"
+                },
+                {
                     "name": "Michel Fortin",
                     "email": "michel.fortin@michelf.ca",
                     "homepage": "https://michelf.ca/",
                     "role": "Developer"
-                },
-                {
-                    "name": "John Gruber",
-                    "homepage": "https://daringfireball.net/"
                 }
             ],
             "description": "PHP Markdown",
@@ -151,34 +151,26 @@
             "keywords": [
                 "markdown"
             ],
-            "time": "2015-07-05 20:37:59"
+            "time": "2015-03-01 12:03:08"
         },
         {
             "name": "psr/log",
-            "version": "dev-master",
+            "version": "1.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/php-fig/log.git",
-                "reference": "9e45edca52cc9c954680072c93e621f8b71fab26"
+                "reference": "fe0936ee26643249e916849d48e3a51d5f5e278b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/php-fig/log/zipball/9e45edca52cc9c954680072c93e621f8b71fab26",
-                "reference": "9e45edca52cc9c954680072c93e621f8b71fab26",
+                "url": "https://api.github.com/repos/php-fig/log/zipball/fe0936ee26643249e916849d48e3a51d5f5e278b",
+                "reference": "fe0936ee26643249e916849d48e3a51d5f5e278b",
                 "shasum": ""
             },
-            "require": {
-                "php": ">=5.3.0"
-            },
             "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "1.0.x-dev"
-                }
-            },
             "autoload": {
-                "psr-4": {
-                    "Psr\\Log\\": "Psr/Log/"
+                "psr-0": {
+                    "Psr\\Log\\": ""
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -197,29 +189,29 @@
                 "psr",
                 "psr-3"
             ],
-            "time": "2015-06-02 13:48:41"
+            "time": "2012-12-21 11:40:51"
         },
         {
             "name": "rareloop/primer-core",
-            "version": "dev-master",
+            "version": "v1.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Rareloop/primer-core.git",
-                "reference": "85c24ee2372bdd6df1f78a445b240aa2e945ed12"
+                "reference": "49476c1ab283a878746f70e6ca8e880d82a8d458"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Rareloop/primer-core/zipball/85c24ee2372bdd6df1f78a445b240aa2e945ed12",
-                "reference": "85c24ee2372bdd6df1f78a445b240aa2e945ed12",
+                "url": "https://api.github.com/repos/Rareloop/primer-core/zipball/49476c1ab283a878746f70e6ca8e880d82a8d458",
+                "reference": "49476c1ab283a878746f70e6ca8e880d82a8d458",
                 "shasum": ""
             },
             "require": {
                 "gajus/dindent": "1.0.*",
-                "michelf/php-markdown": "1.4.*@dev",
+                "michelf/php-markdown": "1.5.*",
                 "symfony/console": "2.5.*",
-                "symfony/debug": "^3.0@dev",
+                "symfony/debug": "2.7.*",
                 "symfony/event-dispatcher": "2.3.*",
-                "xamin/handlebars.php": "dev-master"
+                "xamin/handlebars.php": "0.10.*"
             },
             "type": "library",
             "autoload": {
@@ -229,11 +221,11 @@
             },
             "notification-url": "https://packagist.org/downloads/",
             "description": "Core Primer framework",
-            "time": "2015-07-20 15:53:10"
+            "time": "2015-07-23 08:14:48"
         },
         {
             "name": "symfony/console",
-            "version": "2.5.x-dev",
+            "version": "v2.5.12",
             "target-dir": "Symfony/Component/Console",
             "source": {
                 "type": "git",
@@ -288,30 +280,30 @@
         },
         {
             "name": "symfony/debug",
-            "version": "dev-master",
+            "version": "v2.7.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/Debug.git",
-                "reference": "4120585d4d8ffd4767145f32ee910a2f24ceddc1"
+                "reference": "9daa1bf9f7e615fa2fba30357e479a90141222e3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/Debug/zipball/4120585d4d8ffd4767145f32ee910a2f24ceddc1",
-                "reference": "4120585d4d8ffd4767145f32ee910a2f24ceddc1",
+                "url": "https://api.github.com/repos/symfony/Debug/zipball/9daa1bf9f7e615fa2fba30357e479a90141222e3",
+                "reference": "9daa1bf9f7e615fa2fba30357e479a90141222e3",
                 "shasum": ""
             },
             "require": {
-                "php": ">=5.5.9",
+                "php": ">=5.3.9",
                 "psr/log": "~1.0"
             },
             "conflict": {
                 "symfony/http-kernel": ">=2.3,<2.3.24|~2.4.0|>=2.5,<2.5.9|>=2.6,<2.6.2"
             },
             "require-dev": {
-                "symfony/class-loader": "~2.8|~3.0",
-                "symfony/http-foundation": "~2.8|~3.0",
-                "symfony/http-kernel": "~2.8|~3.0",
-                "symfony/phpunit-bridge": "~2.8|~3.0"
+                "symfony/class-loader": "~2.2",
+                "symfony/http-foundation": "~2.1",
+                "symfony/http-kernel": "~2.3.24|~2.5.9|~2.6,>=2.6.2",
+                "symfony/phpunit-bridge": "~2.7"
             },
             "suggest": {
                 "symfony/http-foundation": "",
@@ -320,7 +312,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "3.0-dev"
+                    "dev-master": "2.7-dev"
                 }
             },
             "autoload": {
@@ -344,11 +336,11 @@
             ],
             "description": "Symfony Debug Component",
             "homepage": "https://symfony.com",
-            "time": "2015-07-09 16:12:34"
+            "time": "2015-07-09 16:07:40"
         },
         {
             "name": "symfony/event-dispatcher",
-            "version": "2.3.x-dev",
+            "version": "v2.3.31",
             "target-dir": "Symfony/Component/EventDispatcher",
             "source": {
                 "type": "git",
@@ -403,16 +395,16 @@
         },
         {
             "name": "xamin/handlebars.php",
-            "version": "dev-master",
+            "version": "v0.10.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/XaminProject/handlebars.php.git",
-                "reference": "a47d7e0fb26d1da08475c1ffa40a86159a78ba69"
+                "reference": "2c78af65e058df61063e595285a30122109f2477"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/XaminProject/handlebars.php/zipball/a47d7e0fb26d1da08475c1ffa40a86159a78ba69",
-                "reference": "a47d7e0fb26d1da08475c1ffa40a86159a78ba69",
+                "url": "https://api.github.com/repos/XaminProject/handlebars.php/zipball/2c78af65e058df61063e595285a30122109f2477",
+                "reference": "2c78af65e058df61063e595285a30122109f2477",
                 "shasum": ""
             },
             "require-dev": {
@@ -441,15 +433,13 @@
             ],
             "description": "Handlebars processor for php",
             "homepage": "https://github.com/XaminProject/handlebars.php",
-            "time": "2015-07-14 18:08:50"
+            "time": "2015-06-23 20:57:29"
         }
     ],
     "packages-dev": [],
     "aliases": [],
-    "minimum-stability": "dev",
-    "stability-flags": {
-        "rareloop/primer-core": 20
-    },
+    "minimum-stability": "stable",
+    "stability-flags": [],
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": [],
