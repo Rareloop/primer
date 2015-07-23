@@ -5,9 +5,18 @@ Primer is a tool to aid with the design & development of a web site/app. It help
 Primer is: 
 
 - a prototyping tool
-- a useful resource for cataloging all the individual parts that make up yout style guide
+- a catalog of all the individual parts that make up your style guide
 - a way to isolate/develop a single part of the overall system
 - a centralised place for designers, developers and product owners to refer to
+- designed to be a living document, ever evolving as your site develops
+
+Primer isn't:
+
+- a front end framework
+- opinionated about your front end stack or tooling
+- a static site generator
+
+![Primer Screenshot](https://dl.dropboxusercontent.com/u/20572064/primer-screenshot.png)
 
 ## Installation
 
@@ -131,3 +140,6 @@ There is a CLI as a convenience for creating new patterns. When in the root dire
     php serve pattern:make components/cards/news-card
     
 This would create a new pattern directory and placeholder `template.hbs` & `data.json` files.
+
+## License
+Primer is ©2015 Rareloop and is licensed under the terms of the [MIT license](http://opensource.org/licenses/MIT)
