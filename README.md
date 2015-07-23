@@ -22,17 +22,23 @@ Primer isn't:
 
 To get started, simply run from the Primer folder:
 
-	$ composer install
+```bash
+composer install
+```
 
 ## Usage
 
 Out of the box, Primer is setup to run from the root of your domain. You can create a virtual host within Apache or to get up and running straight away run the command:
 
-	php primer serve
+```
+php primer serve
+```
 
 This will start a standalone server from which you can begin to work in. By default the server starts on port `8080`, if you would like to run from something different you can supply an additional argument:
 
-	php primer serve 8081
+```bash
+php primer serve 8081
+```
 
 ## Patterns
 
@@ -47,7 +53,9 @@ Patterns are then futher divided into groups, to allow multiple patterns to be l
 
 **Example:** For an `element` pattern named `input` inside the `forms` group, the path would be:
 
-	[Primer Directory]/patterns/elements/forms/input
+```
+[Primer Directory]/patterns/elements/forms/input
+```
 
 ### Anotomy of a pattern
 
@@ -71,23 +79,29 @@ To make a special case of a pattern duplicate the name and append a `~` followed
 
 Any pattern can be included within another by using a custom Handlebars helper, e.g.
 
-	<div class="sub-pattern">
-		{{ #inc elements/forms/input }}
-	</div>
+```hbs
+<div class="sub-pattern">
+	{{#inc elements/forms/input}}
+</div>
+```
 
 Data from the included pattern will be loaded for it by default. If you want to override the data in the parent pattern you can add it to the parent patterns `data.json` with a key that matches the last part of the included patterns `id` e.g. For the above example we would have something like:
 
-	{
-		"input": {
-			"title": "Sub Pattern Title"
-		}
+```json
+{
+	"input": {
+		"title": "Sub Pattern Title"
 	}
+}
+```
 
 ## Templates
 
 Templates are just special cases of Patterns and are located in the `patterns/templates` folder. There is no requirement for grouping, or the level of grouping that is possible. To show a particular template you would use the `template` route, e.g.
 
-	/template/home
+```
+/template/home
+```
 
 Would load the template found in `patterns/templates/home`.
 
@@ -96,32 +110,38 @@ Sometimes it will be desirable to show the same pattern multiple times within th
 
 If the template looked like the following:
 
-	<div class="sub-pattern">
-		{{ #inc elements/forms/input data="name" }}
-		{{ #inc elements/forms/input data="email" }}
-	</div>
+```hbs
+<div class="sub-pattern">
+	{{#inc elements/forms/input data="name"}}
+	{{#inc elements/forms/input data="email"}}
+</div>
+```
 
 The template `data.json` would look like this:
 
-	{
-		"input:name": {
-			"title": "What is your name?",
-			"type": "text"
-		},
+```json
+{
+	"input:name": {
+		"title": "What is your name?",
+		"type": "text"
+	},
 
-		"input:email": {
-			"title": "What is your email?",
-			"type": "email"
-		}
+	"input:email": {
+		"title": "What is your email?",
+		"type": "email"
 	}
+}
+```
 
 ## Custom Views
 
 Each template can use a seperate View if required, to change the View just set the `view` variable in the `data.json` file, e.g.
 
-	{
-		"view": "custom-view"
-	}
+```json
+{
+	"view": "custom-view"
+}
+```
 
 Would use the view: `views/custom-view.hbs`. The default value for `view` is `template`.
 
@@ -131,13 +151,17 @@ Would use the view: `views/custom-view.hbs`. The default value for `view` is `te
 
 Multiple patterns/groups can be isolated, enabling a custom list of items to be viewed. To do this seperate the list of pattern/group `id`'s with a `:` character.
 
-	/patterns/elements/forms/button:elements/forms/input
+```
+/patterns/elements/forms/button:elements/forms/input
+```
 
 ## CLI
 
 There is a CLI as a convenience for creating new patterns. When in the root directory you can do the following:
 
-    php serve pattern:make components/cards/news-card
+```bash
+php serve pattern:make components/cards/news-card
+```
     
 This would create a new pattern directory and placeholder `template.hbs` & `data.json` files.
 
