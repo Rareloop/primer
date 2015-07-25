@@ -56,6 +56,6 @@ ViewData::composer('elements/forms/input', function ($data) {
  *
  * @var Primer
  */
-$patternLab = \Rareloop\Primer\Primer::start(__DIR__.'/..');
+$primer = \Rareloop\Primer\Primer::start(__DIR__.'/..');
 
-return $patternLab;
+return $primer;
