@@ -1,0 +1,5 @@
+<div class="field">
+    <label class="field__label" for="text"><?php echo $label; ?> <abbr title="Required">*</abbr></label>
+    <input class="field__input" id="text" type="<?php echo $type; ?>" placeholder="<?php echo $placeholder; ?>">
+    <small class="field__note">Note about this field</small>
+</div>

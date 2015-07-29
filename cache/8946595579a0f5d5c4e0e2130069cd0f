@@ -1,0 +1,18 @@
+<div class="primer-pattern" data-id="<?php echo $id; ?>">
+	<div class="primer-pattern__header">
+		<div class="primer-pattern__title"><?php echo $title; ?></div>
+		<div class="primer-pattern__actions">
+			<a class="primer-pattern__link" href="/patterns/<?php echo $id; ?>" title="Show this pattern on its own">#</a>
+		</div>
+		<?php if($copy): ?>
+			<div class="primer-pattern__copy"><?php echo $copy; ?></div>
+		<?php endif; ?>
+	</div>
+	<div class="primer-pattern__html">
+		<pre><code class="language-markup"><?php echo $html; ?></code></pre>
+	</div>
+	<div class="primer-pattern__content">
+		<?php echo $html; ?>
+
+	</div>
+</div>

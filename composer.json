@@ -2,9 +2,16 @@
     "name": "rareloop/primer",
     "minimum-stability": "dev",
 
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "git@github.com:joelambert/primer-core.git"
+        }
+    ],
 
     "require": {
-        "rareloop/primer-core": "dev-master",
-        "altorouter/altorouter": "1.1.0"
+        "rareloop/primer-core": "dev-multi-template-engines",
+        "altorouter/altorouter": "1.1.0",
+        "philo/laravel-blade": "2.*"
     }
 }
