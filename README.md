@@ -160,7 +160,7 @@ Multiple patterns/groups can be isolated, enabling a custom list of items to be 
 There is a CLI as a convenience for creating new patterns. When in the root directory you can do the following:
 
 ```bash
-php serve pattern:make components/cards/news-card
+php primer pattern:make components/cards/news-card
 ```
     
 This would create a new pattern directory and placeholder `template.hbs` & `data.json` files.
