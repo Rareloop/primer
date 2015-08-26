@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "28d647d867595f081fec706423306692",
+    "hash": "8fd870542ecc050e6a3c577a49917018",
     "packages": [
         {
             "name": "altorouter/altorouter",
@@ -554,12 +554,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/Debug.git",
-                "reference": "9daa1bf9f7e615fa2fba30357e479a90141222e3"
+                "reference": "22b295edff4114adf752a4b919f4355e744104f5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/Debug/zipball/9daa1bf9f7e615fa2fba30357e479a90141222e3",
-                "reference": "9daa1bf9f7e615fa2fba30357e479a90141222e3",
+                "url": "https://api.github.com/repos/symfony/Debug/zipball/22b295edff4114adf752a4b919f4355e744104f5",
+                "reference": "22b295edff4114adf752a4b919f4355e744104f5",
                 "shasum": ""
             },
             "require": {
@@ -571,13 +571,8 @@
             },
             "require-dev": {
                 "symfony/class-loader": "~2.2",
-                "symfony/http-foundation": "~2.1",
                 "symfony/http-kernel": "~2.3.24|~2.5.9|~2.6,>=2.6.2",
                 "symfony/phpunit-bridge": "~2.7"
-            },
-            "suggest": {
-                "symfony/http-foundation": "",
-                "symfony/http-kernel": ""
             },
             "type": "library",
             "extra": {
@@ -606,7 +601,7 @@
             ],
             "description": "Symfony Debug Component",
             "homepage": "https://symfony.com",
-            "time": "2015-07-09 16:07:40"
+            "time": "2015-08-17 08:58:33"
         },
         {
             "name": "symfony/event-dispatcher",
@@ -711,17 +706,78 @@
             "time": "2015-01-03 08:01:13"
         },
         {
-            "name": "xamin/handlebars.php",
-            "version": "v0.10.1",
+            "name": "twig/twig",
+            "version": "1.x-dev",
             "source": {
                 "type": "git",
-                "url": "https://github.com/XaminProject/handlebars.php.git",
-                "reference": "2c78af65e058df61063e595285a30122109f2477"
+                "url": "https://github.com/twigphp/Twig.git",
+                "reference": "91c9f50716c4bd708fae41fd740def979a338b73"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/XaminProject/handlebars.php/zipball/2c78af65e058df61063e595285a30122109f2477",
-                "reference": "2c78af65e058df61063e595285a30122109f2477",
+                "url": "https://api.github.com/repos/twigphp/Twig/zipball/91c9f50716c4bd708fae41fd740def979a338b73",
+                "reference": "91c9f50716c4bd708fae41fd740def979a338b73",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.2.7"
+            },
+            "require-dev": {
+                "symfony/debug": "~2.7",
+                "symfony/phpunit-bridge": "~2.7"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.21-dev"
+                }
+            },
+            "autoload": {
+                "psr-0": {
+                    "Twig_": "lib/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Fabien Potencier",
+                    "email": "fabien@symfony.com",
+                    "homepage": "http://fabien.potencier.org",
+                    "role": "Lead Developer"
+                },
+                {
+                    "name": "Armin Ronacher",
+                    "email": "armin.ronacher@active-4.com",
+                    "role": "Project Founder"
+                },
+                {
+                    "name": "Twig Team",
+                    "homepage": "http://twig.sensiolabs.org/contributors",
+                    "role": "Contributors"
+                }
+            ],
+            "description": "Twig, the flexible, fast, and secure template language for PHP",
+            "homepage": "http://twig.sensiolabs.org",
+            "keywords": [
+                "templating"
+            ],
+            "time": "2015-08-26 09:02:09"
+        },
+        {
+            "name": "xamin/handlebars.php",
+            "version": "v0.10.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/XaminProject/handlebars.php.git",
+                "reference": "a47d7e0fb26d1da08475c1ffa40a86159a78ba69"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/XaminProject/handlebars.php/zipball/a47d7e0fb26d1da08475c1ffa40a86159a78ba69",
+                "reference": "a47d7e0fb26d1da08475c1ffa40a86159a78ba69",
                 "shasum": ""
             },
             "require-dev": {
@@ -750,7 +806,7 @@
             ],
             "description": "Handlebars processor for php",
             "homepage": "https://github.com/XaminProject/handlebars.php",
-            "time": "2015-06-23 20:57:29"
+            "time": "2015-07-14 18:08:50"
         }
     ],
     "packages-dev": [],

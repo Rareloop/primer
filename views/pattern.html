@@ -1,0 +1,17 @@
+<div class="primer-pattern" data-id="{{id}}">
+	<div class="primer-pattern__header">
+		<div class="primer-pattern__title">{{title}}</div>
+		<div class="primer-pattern__actions">
+			<a class="primer-pattern__link" href="/patterns/{{id}}" title="Show this pattern on its own">#</a>
+		</div>
+		{% if copy %}
+			<div class="primer-pattern__copy">{{copy|raw}}</div>
+		{% endif %}
+	</div>
+	<div class="primer-pattern__html">
+		<pre><code class="language-markup">{{html}}</code></pre>
+	</div>
+	<div class="primer-pattern__content">
+		{{html|raw}}
+	</div>
+</div>

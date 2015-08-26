@@ -12,6 +12,13 @@
     "require": {
         "rareloop/primer-core": "dev-multi-template-engines",
         "altorouter/altorouter": "1.1.0",
-        "philo/laravel-blade": "2.*"
+        "philo/laravel-blade": "2.*",
+        "twig/twig": "~1.0"
+    },
+
+    "autoload": {
+        "psr-4": {
+            "Rareloop\\": "src/rareloop"
+        }
     }
 }
