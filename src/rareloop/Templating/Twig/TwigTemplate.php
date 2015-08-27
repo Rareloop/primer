@@ -3,7 +3,7 @@
 use Rareloop\Primer\Templating\Template;
 use Rareloop\Templating\Twig\Twig;
 use Rareloop\Primer\Primer;
-
+use Rareloop\Primer\Templating\ViewData;
 
 
 class TwigTemplate extends Template
@@ -40,8 +40,12 @@ class TwigTemplate extends Template
     //     $this->template = $template;
     // }
 
-    public function render($data)
+    public function render($data = null)
     {
+        if(!isset($data)) {
+            $data = new ViewData(array());
+        }
+
         $engine = Twig::instance();
         $path = str_replace(Primer::$BASE_PATH, '', $this->directory);
         return $engine->render($path . '/'. $this->filename . '.' . $this->extensions[0], $data->toArray());

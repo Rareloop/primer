@@ -1,3 +1,6 @@
 {
-	"title": "Lorem ipsum dolor sit amet consectetur"
+	"title": "Lorem ipsum dolor sit amet consectetur",
+    "h1": {
+        "title": "This is a bigger heading"
+    }
 }

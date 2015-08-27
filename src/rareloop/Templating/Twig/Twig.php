@@ -1,7 +1,7 @@
 <?php namespace Rareloop\Templating\Twig;
 
 use Rareloop\Primer\FileSystem;
-// use Rareloop\Primer\Templating\Handlebars\Helpers\Inc;
+use Rareloop\Templating\Twig\IncTokenParser;
 use Rareloop\Primer\Events\Event;
 use Rareloop\Primer\Primer;
 
@@ -28,7 +28,11 @@ class Twig extends \Twig_Environment
     {
         $loader = new \Twig_Loader_Filesystem(Primer::$BASE_PATH);
 
-        parent::__construct($loader);
+        parent::__construct($loader, array(
+            'cache' => Primer::$BASE_PATH.'/cache'
+        ));
+
+        $this->addTokenParser(new IncTokenParser());
 
         // Register a helper to include sub patterns
         // $this->getHelpers()->add('inc', new Inc());
