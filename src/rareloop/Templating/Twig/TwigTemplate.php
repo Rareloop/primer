@@ -15,39 +15,27 @@ class TwigTemplate extends Template
      */
     protected $extensions = array('twig');
 
-    // public function load($directory, $filename)
-    // {
-    //     parent::load($directory, $filename);
-
-    //     $template = false;
-
-    //     // Try and resolve the template to a real path
-    //     foreach ($this->extensions as $ext) {
-    //         // If we've not already found the template then keep looking
-    //         if(!$template) {
-    //             $path = $directory . '/' . $filename . '.' . $ext;
-
-    //             if(is_file($path)) {
-    //                 $template = file_get_contents($path);
-    //             }
-    //         }
-    //     }
-
-    //     if(!$template) {
-    //         throw new \Exception('Template can not be found');
-    //     }
-
-    //     $this->template = $template;
-    // }
-
+    /**
+     * Render this template with the provided data
+     *
+     * @param  ViewData $data [description]
+     * @return [type]       [description]
+     */
     public function render($data = null)
     {
+        // Ensure that $data is not null
         if(!isset($data)) {
             $data = new ViewData(array());
         }
 
+        // Access the singleton Twig engine
         $engine = Twig::instance();
+
+        // The Twig loader is setup to load from the Primer base path so we need to remove this
+        // from the template path so that we have it relative to the base
         $path = str_replace(Primer::$BASE_PATH, '', $this->directory);
+
+        // Render the template
         return $engine->render($path . '/'. $this->filename . '.' . $this->extensions[0], $data->toArray());
     }
 }
