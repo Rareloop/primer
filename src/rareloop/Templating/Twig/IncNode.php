@@ -36,9 +36,26 @@ class IncNode extends \Twig_Node_Include
     protected function addGetTemplate(\Twig_Compiler $compiler)
     {
         $compiler
-            ->write('$subTemplate = new Rareloop\Templating\Twig\TwigTemplate("patterns/" . ')
+            // Create a variable with the template string
+            ->write('$patternId = ')
             ->subcompile($this->getNode('expr'))
-            ->raw(', "template");')
+            ->raw(";\n")
+
+            // Check to see if we should be loading the template from a parent 
+            // template (e.g. we have a ~ in the name)
+            ->write('if (strpos($patternId, "~") !== false) {' . "\n")
+            ->indent()
+            ->write('$parts = explode("~", $patternId);' . "\n")
+            ->write('if (count($parts) > 1) {' . "\n")
+            ->indent()
+            ->write('$patternId = $parts[0];' . "\n")
+            ->outdent()
+            ->write("}\n")
+            ->outdent()
+            ->write("}\n")
+
+            // Load the correct template
+            ->write('$subTemplate = new Rareloop\Templating\Twig\TwigTemplate("patterns/" . $patternId, "template");')
             ->raw("\n")
          ;
     }
@@ -46,7 +63,6 @@ class IncNode extends \Twig_Node_Include
     protected function addTemplateArguments(\Twig_Compiler $compiler)
     {
         // TODO: The below doesn't take into account patterns with parents (e.g. ~)
-        // TODO: Also doesn't handle data inheritance properly yet
         $compiler
             ->raw('new Rareloop\Primer\Templating\ViewData(array_merge(')
             ->raw('Rareloop\Primer\FileSystem::getDataForPattern(')
