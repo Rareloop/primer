@@ -13,7 +13,7 @@ class TwigTemplate extends Template
      *
      * @var array
      */
-    protected $extensions = array('html');
+    protected $extensions = array('twig');
 
     // public function load($directory, $filename)
     // {

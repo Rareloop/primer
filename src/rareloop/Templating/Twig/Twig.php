@@ -29,7 +29,8 @@ class Twig extends \Twig_Environment
         $loader = new \Twig_Loader_Filesystem(Primer::$BASE_PATH);
 
         parent::__construct($loader, array(
-            'cache' => Primer::$BASE_PATH.'/cache'
+            'cache' => Primer::$BASE_PATH.'/cache',
+            'auto_reload' => true,
         ));
 
         $this->addTokenParser(new IncTokenParser());
