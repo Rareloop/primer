@@ -67,7 +67,7 @@ class IncNode extends \Twig_Node_Include
             ->raw('new Rareloop\Primer\Templating\ViewData(array_merge(')
             ->raw('Rareloop\Primer\FileSystem::getDataForPattern(')
             ->subcompile($this->getNode('expr'))
-            ->raw(')')
+            ->raw(', true)')
             ->raw(', ')
             ->raw('$context')
         ;
