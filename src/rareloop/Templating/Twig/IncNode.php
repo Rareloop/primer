@@ -62,7 +62,6 @@ class IncNode extends \Twig_Node_Include
 
     protected function addTemplateArguments(\Twig_Compiler $compiler)
     {
-        // TODO: The below doesn't take into account patterns with parents (e.g. ~)
         $compiler
             ->raw('new Rareloop\Primer\Templating\ViewData(array_merge(')
             ->raw('Rareloop\Primer\FileSystem::getDataForPattern(')
