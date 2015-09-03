@@ -6,11 +6,26 @@
         {
             "type": "vcs",
             "url": "git@github.com:joelambert/primer-core.git"
+        },
+        {
+            "type": "vcs",
+            "url": "git@github.com:Rareloop/primer-template-engine-handlebars.git"
+        },
+        {
+            "type": "vcs",
+            "url": "git@github.com:Rareloop/primer-template-engine-blade.git"
+        },
+        {
+            "type": "vcs",
+            "url": "git@github.com:Rareloop/primer-template-engine-twig.git"
         }
     ],
 
     "require": {
         "rareloop/primer-core": "dev-multi-template-engines",
+        "rareloop/primer-template-engine-handlebars": "dev-master",
+        "rareloop/primer-template-engine-blade": "dev-master",
+        "rareloop/primer-template-engine-twig": "dev-master",
         "altorouter/altorouter": "1.1.0",
         "philo/laravel-blade": "3.*",
         "twig/twig": "~1.0",
@@ -21,11 +36,5 @@
 
     "require-dev": {
         "phpunit/phpunit": "4.8.*"
-    },
-
-    "autoload": {
-        "psr-4": {
-            "Rareloop\\": "src/rareloop"
-        }
     }
 }

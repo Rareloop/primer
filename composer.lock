@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "ca557de3e84006ffb3532076bdf86882",
+    "hash": "e460ff848c4abf9f4ac24eb4eeb66ce0",
     "packages": [
         {
             "name": "altorouter/altorouter",
@@ -119,12 +119,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/doctrine/inflector.git",
-                "reference": "63c61ba4f8f20c9a013e0fb5b6c0a8d0002f87a9"
+                "reference": "a081a0c2f14486254464f1a657595f5a6b3092f4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/doctrine/inflector/zipball/63c61ba4f8f20c9a013e0fb5b6c0a8d0002f87a9",
-                "reference": "63c61ba4f8f20c9a013e0fb5b6c0a8d0002f87a9",
+                "url": "https://api.github.com/repos/doctrine/inflector/zipball/a081a0c2f14486254464f1a657595f5a6b3092f4",
+                "reference": "a081a0c2f14486254464f1a657595f5a6b3092f4",
                 "shasum": ""
             },
             "require": {
@@ -178,7 +178,7 @@
                 "singularize",
                 "string"
             ],
-            "time": "2015-08-26 14:31:47"
+            "time": "2015-09-02 15:55:05"
         },
         {
             "name": "gajus/dindent",
@@ -729,12 +729,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/joelambert/primer-core.git",
-                "reference": "2d57a9131f5c730050818e824f159fdb2639e136"
+                "reference": "d56a6403ff37e9f0bc67da0e66bfc13324fdc3e5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/joelambert/primer-core/zipball/2d57a9131f5c730050818e824f159fdb2639e136",
-                "reference": "2d57a9131f5c730050818e824f159fdb2639e136",
+                "url": "https://api.github.com/repos/joelambert/primer-core/zipball/d56a6403ff37e9f0bc67da0e66bfc13324fdc3e5",
+                "reference": "d56a6403ff37e9f0bc67da0e66bfc13324fdc3e5",
                 "shasum": ""
             },
             "require": {
@@ -755,7 +755,99 @@
             "support": {
                 "source": "https://github.com/joelambert/primer-core/tree/multi-template-engines"
             },
-            "time": "2015-08-28 18:59:54"
+            "time": "2015-09-03 12:26:36"
+        },
+        {
+            "name": "rareloop/primer-template-engine-blade",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Rareloop/primer-template-engine-blade.git",
+                "reference": "fe00b5d99213e0e4ffaa86ec333a0d520901b7b1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Rareloop/primer-template-engine-blade/zipball/fe00b5d99213e0e4ffaa86ec333a0d520901b7b1",
+                "reference": "fe00b5d99213e0e4ffaa86ec333a0d520901b7b1",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/events": "~5.0.0",
+                "illuminate/view": "~5.0.0",
+                "philo/laravel-blade": "3.*"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Rareloop\\Primer\\TemplateEngine\\Blade\\": "src/Blade"
+                }
+            },
+            "description": "Blade template engine for Primer",
+            "support": {
+                "source": "https://github.com/Rareloop/primer-template-engine-blade/tree/master",
+                "issues": "https://github.com/Rareloop/primer-template-engine-blade/issues"
+            },
+            "time": "2015-09-03 13:48:05"
+        },
+        {
+            "name": "rareloop/primer-template-engine-handlebars",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Rareloop/primer-template-engine-handlebars.git",
+                "reference": "2598d00e3ca3217feed4aadd71fdaa24e635de89"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Rareloop/primer-template-engine-handlebars/zipball/2598d00e3ca3217feed4aadd71fdaa24e635de89",
+                "reference": "2598d00e3ca3217feed4aadd71fdaa24e635de89",
+                "shasum": ""
+            },
+            "require": {
+                "xamin/handlebars.php": "0.10.*"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Rareloop\\Primer\\TemplateEngine\\Handlebars\\": "src/Handlebars"
+                }
+            },
+            "description": "Handlebars template engine for Primer",
+            "support": {
+                "source": "https://github.com/Rareloop/primer-template-engine-handlebars/tree/master",
+                "issues": "https://github.com/Rareloop/primer-template-engine-handlebars/issues"
+            },
+            "time": "2015-09-03 13:38:26"
+        },
+        {
+            "name": "rareloop/primer-template-engine-twig",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Rareloop/primer-template-engine-twig.git",
+                "reference": "621e81e4b8e95963ca90092e83321f1511ce8bb4"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Rareloop/primer-template-engine-twig/zipball/621e81e4b8e95963ca90092e83321f1511ce8bb4",
+                "reference": "621e81e4b8e95963ca90092e83321f1511ce8bb4",
+                "shasum": ""
+            },
+            "require": {
+                "twig/twig": "~1.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Rareloop\\Primer\\TemplateEngine\\Twig\\": "src/Twig"
+                }
+            },
+            "description": "Twig template engine for Primer",
+            "support": {
+                "source": "https://github.com/Rareloop/primer-template-engine-twig/tree/master",
+                "issues": "https://github.com/Rareloop/primer-template-engine-twig/issues"
+            },
+            "time": "2015-09-03 13:52:44"
         },
         {
             "name": "symfony/console",
@@ -978,12 +1070,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/twigphp/Twig.git",
-                "reference": "5815c8344b4d645323d92dab3abb5b8a7d8dd605"
+                "reference": "b1a4c14b6076cd180b7133a1ded15efd18b2390e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/twigphp/Twig/zipball/5815c8344b4d645323d92dab3abb5b8a7d8dd605",
-                "reference": "5815c8344b4d645323d92dab3abb5b8a7d8dd605",
+                "url": "https://api.github.com/repos/twigphp/Twig/zipball/b1a4c14b6076cd180b7133a1ded15efd18b2390e",
+                "reference": "b1a4c14b6076cd180b7133a1ded15efd18b2390e",
                 "shasum": ""
             },
             "require": {
@@ -1031,7 +1123,7 @@
             "keywords": [
                 "templating"
             ],
-            "time": "2015-08-27 07:48:00"
+            "time": "2015-09-01 09:38:14"
         },
         {
             "name": "xamin/handlebars.php",
@@ -1242,16 +1334,16 @@
         },
         {
             "name": "phpunit/php-code-coverage",
-            "version": "dev-master",
+            "version": "2.2.x-dev",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/php-code-coverage.git",
-                "reference": "751653e81e3fcbddbe026f36e6e16fafd0a19f46"
+                "reference": "ab2283bf4a836d7f2ec5f33c15d6802d9f4cb512"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/php-code-coverage/zipball/751653e81e3fcbddbe026f36e6e16fafd0a19f46",
-                "reference": "751653e81e3fcbddbe026f36e6e16fafd0a19f46",
+                "url": "https://api.github.com/repos/sebastianbergmann/php-code-coverage/zipball/ab2283bf4a836d7f2ec5f33c15d6802d9f4cb512",
+                "reference": "ab2283bf4a836d7f2ec5f33c15d6802d9f4cb512",
                 "shasum": ""
             },
             "require": {
@@ -1300,7 +1392,7 @@
                 "testing",
                 "xunit"
             ],
-            "time": "2015-08-17 07:51:01"
+            "time": "2015-09-01 12:25:27"
         },
         {
             "name": "phpunit/php-file-iterator",
@@ -1486,12 +1578,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/phpunit.git",
-                "reference": "2246830f4a1a551c67933e4171bf2126dc29d357"
+                "reference": "c0a9c60434bc8a94115efe40d97f4348352c831a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/2246830f4a1a551c67933e4171bf2126dc29d357",
-                "reference": "2246830f4a1a551c67933e4171bf2126dc29d357",
+                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/c0a9c60434bc8a94115efe40d97f4348352c831a",
+                "reference": "c0a9c60434bc8a94115efe40d97f4348352c831a",
                 "shasum": ""
             },
             "require": {
@@ -1550,7 +1642,7 @@
                 "testing",
                 "xunit"
             ],
-            "time": "2015-08-24 04:09:38"
+            "time": "2015-09-02 07:15:27"
         },
         {
             "name": "phpunit/phpunit-mock-objects",
@@ -2033,7 +2125,10 @@
     "aliases": [],
     "minimum-stability": "dev",
     "stability-flags": {
-        "rareloop/primer-core": 20
+        "rareloop/primer-core": 20,
+        "rareloop/primer-template-engine-handlebars": 20,
+        "rareloop/primer-template-engine-blade": 20,
+        "rareloop/primer-template-engine-twig": 20
     },
     "prefer-stable": false,
     "prefer-lowest": false,

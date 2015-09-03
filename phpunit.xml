@@ -3,17 +3,17 @@
          colors="true">
     <testsuites>
         <testsuite name="Handlebars Engine">
-            <directory>./src/rareloop/Templating/Handlebars/Tests</directory>
+            <directory>./vendor/rareloop/primer-template-engine-handlebars/src/Handlebars/Tests</directory>
         </testsuite>
     </testsuites>
     <testsuites>
         <testsuite name="Twig Engine">
-            <directory>./src/rareloop/Templating/Twig/Tests</directory>
+            <directory>./vendor/rareloop/primer-template-engine-twig/src/Twig/Tests</directory>
         </testsuite>
     </testsuites>
     <testsuites>
         <testsuite name="Blade Engine">
-            <directory>./src/rareloop/Templating/Blade/Tests</directory>
+            <directory>./vendor/rareloop/primer-template-engine-blade/src/Blade/Tests</directory>
         </testsuite>
     </testsuites>
 </phpunit>
