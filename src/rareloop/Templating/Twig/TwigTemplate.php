@@ -13,7 +13,7 @@ class TwigTemplate extends Template
      *
      * @var array
      */
-    protected $extensions = array('twig');
+    protected $extension = 'twig';
 
     /**
      * Render this template with the provided data
@@ -36,6 +36,6 @@ class TwigTemplate extends Template
         $path = str_replace(Primer::$BASE_PATH, '', $this->directory);
 
         // Render the template
-        return $engine->render($path . '/'. $this->filename . '.' . $this->extensions[0], $data->toArray());
+        return $engine->render($path . '/'. $this->filename . '.' . $this->extension, $data->toArray());
     }
 }

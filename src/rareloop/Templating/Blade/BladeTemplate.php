@@ -13,7 +13,7 @@ class BladeTemplate extends Template
      *
      * @var array
      */
-    protected $extensions = array('blade.php');
+    protected $extension = 'blade.php';
 
     /**
      * Render this template with the provided data

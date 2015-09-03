@@ -14,7 +14,7 @@ class HandlebarsTemplate extends Template
      *
      * @var array
      */
-    protected $extensions = array('hbs', 'handlebars');
+    protected $extension = 'hbs';
 
     public function load($directory, $filename)
     {
@@ -22,16 +22,10 @@ class HandlebarsTemplate extends Template
 
         $template = false;
 
-        // Try and resolve the template to a real path
-        foreach ($this->extensions as $ext) {
-            // If we've not already found the template then keep looking
-            if(!$template) {
-                $path = $directory . '/' . $filename . '.' . $ext;
+        $path = $directory . '/' . $filename . '.' . $this->extension;
 
-                if(is_file($path)) {
-                    $template = file_get_contents($path);
-                }
-            }
+        if(is_file($path)) {
+            $template = file_get_contents($path);
         }
 
         if(!$template) {
