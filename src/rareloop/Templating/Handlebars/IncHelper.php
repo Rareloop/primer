@@ -76,7 +76,7 @@ class IncHelper implements Helper
 
                     // See if this is a variable and not just a string
                     try {
-                        $$value = $context->get($value, true);
+                        $value = $context->get($value, true);
                     } catch (InvalidArgumentException $e) {}
 
                     $customContextData[$name] = $value;

@@ -105,11 +105,23 @@ class PatternTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * TODO: Test when there are more than one param passed to a partial
+     * Test when there are more than one param passed to a partial
      */
+    public function testCustomIncludeWithMultipleParams()
+    {
+        $output = $this->primer->getPatterns(array('components/test-group/include-multi-inline-data'), false);
+
+        $this->assertEquals($output, 'abc123');
+    }
     
     /**
-     * TODO: Test when passing a variable to interpolate into a partial (e.g. title=subTitle instead of title='The subtitle')
+     * Test when passing a variable to interpolate into a partial (e.g. title=subTitle instead of title='The subtitle')
      */
+    public function testCustomIncludeWithInterpolatedInlineData()
+    {
+        $output = $this->primer->getPatterns(array('components/test-group/include-interpolated-inline-data'), false);
+
+        $this->assertEquals($output, 'success');
+    }
 }
 ?>
