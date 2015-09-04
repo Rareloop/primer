@@ -56,7 +56,9 @@ ViewData::composer('elements/forms/input', function ($data) {
  *
  * @var Primer
  */
-// $patternLab = \Rareloop\Primer\Primer::start(__DIR__.'/..', 'Rareloop\Primer\Templating\Handlebars\HandlebarsTemplate');
-$patternLab = \Rareloop\Primer\Primer::start(__DIR__.'/..', 'Rareloop\Templating\Twig\TwigTemplate');
+$primer = \Rareloop\Primer\Primer::start(array(
+    'basePath' => __DIR__.'/..', 
+    'templateClass' => 'Rareloop\Primer\TemplateEngine\Blade\Template'
+));
 
-return $patternLab;
+return $primer;
