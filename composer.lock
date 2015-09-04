@@ -763,18 +763,22 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/Rareloop/primer-template-engine-blade.git",
-                "reference": "fe00b5d99213e0e4ffaa86ec333a0d520901b7b1"
+                "reference": "ba6a4731a3df8eaa36a16640187868648eabcc58"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Rareloop/primer-template-engine-blade/zipball/fe00b5d99213e0e4ffaa86ec333a0d520901b7b1",
-                "reference": "fe00b5d99213e0e4ffaa86ec333a0d520901b7b1",
+                "url": "https://api.github.com/repos/Rareloop/primer-template-engine-blade/zipball/ba6a4731a3df8eaa36a16640187868648eabcc58",
+                "reference": "ba6a4731a3df8eaa36a16640187868648eabcc58",
                 "shasum": ""
             },
             "require": {
                 "illuminate/events": "~5.0.0",
                 "illuminate/view": "~5.0.0",
                 "philo/laravel-blade": "3.*"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "4.8.*",
+                "symfony/finder": "2.6.*"
             },
             "type": "library",
             "autoload": {
@@ -787,7 +791,7 @@
                 "source": "https://github.com/Rareloop/primer-template-engine-blade/tree/master",
                 "issues": "https://github.com/Rareloop/primer-template-engine-blade/issues"
             },
-            "time": "2015-09-03 13:48:05"
+            "time": "2015-09-04 13:54:01"
         },
         {
             "name": "rareloop/primer-template-engine-handlebars",
@@ -795,16 +799,19 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/Rareloop/primer-template-engine-handlebars.git",
-                "reference": "2598d00e3ca3217feed4aadd71fdaa24e635de89"
+                "reference": "bfb1a7a2cceaef92801c00b1d8441e167c52d3d1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Rareloop/primer-template-engine-handlebars/zipball/2598d00e3ca3217feed4aadd71fdaa24e635de89",
-                "reference": "2598d00e3ca3217feed4aadd71fdaa24e635de89",
+                "url": "https://api.github.com/repos/Rareloop/primer-template-engine-handlebars/zipball/bfb1a7a2cceaef92801c00b1d8441e167c52d3d1",
+                "reference": "bfb1a7a2cceaef92801c00b1d8441e167c52d3d1",
                 "shasum": ""
             },
             "require": {
                 "xamin/handlebars.php": "0.10.*"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "4.8.*"
             },
             "type": "library",
             "autoload": {
@@ -817,7 +824,7 @@
                 "source": "https://github.com/Rareloop/primer-template-engine-handlebars/tree/master",
                 "issues": "https://github.com/Rareloop/primer-template-engine-handlebars/issues"
             },
-            "time": "2015-09-03 13:38:26"
+            "time": "2015-09-04 13:54:18"
         },
         {
             "name": "rareloop/primer-template-engine-twig",
@@ -825,16 +832,19 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/Rareloop/primer-template-engine-twig.git",
-                "reference": "621e81e4b8e95963ca90092e83321f1511ce8bb4"
+                "reference": "fb7ca6eaadf57d37b57bb7839e36848d0749acdb"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Rareloop/primer-template-engine-twig/zipball/621e81e4b8e95963ca90092e83321f1511ce8bb4",
-                "reference": "621e81e4b8e95963ca90092e83321f1511ce8bb4",
+                "url": "https://api.github.com/repos/Rareloop/primer-template-engine-twig/zipball/fb7ca6eaadf57d37b57bb7839e36848d0749acdb",
+                "reference": "fb7ca6eaadf57d37b57bb7839e36848d0749acdb",
                 "shasum": ""
             },
             "require": {
                 "twig/twig": "~1.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "4.8.*"
             },
             "type": "library",
             "autoload": {
@@ -847,7 +857,7 @@
                 "source": "https://github.com/Rareloop/primer-template-engine-twig/tree/master",
                 "issues": "https://github.com/Rareloop/primer-template-engine-twig/issues"
             },
-            "time": "2015-09-03 13:52:44"
+            "time": "2015-09-04 13:53:40"
         },
         {
             "name": "symfony/console",
