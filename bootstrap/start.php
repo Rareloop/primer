@@ -22,7 +22,7 @@ Event::listen('render', function ($data) {
 /**
  * Listen for when new Handlebars objects are created so that we can register any required helpers
  */
-Event::listen('handlebars.new', function ($handlebars) {
+Event::listen('handlebars.init', function ($handlebars) {
 
 });
 
