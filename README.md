@@ -34,13 +34,13 @@ Patterns are the building blocks of your system and Primer provides a simple way
 
 *Typically `elements` are the same/similar from site to site - `components` are more site specific.*
 
-Patterns are then futher divided into groups, to allow multiple patterns to be logically grouped. 
+Patterns are then further divided into groups, to allow multiple patterns to be logically grouped. 
 
 **Example:** For an `element` pattern named `input` inside the `forms` group, the path would be:
 
 	[Primer Directory]/patterns/elements/forms/input
 
-### Anotomy of a pattern
+### Anatomy of a pattern
 
 Each Pattern has an implicit `id` and `title`. The `id` is the path used to identify it under the patterns folder, e.g. `elements/forms/input`. `id`'s can be used to [show only specific patterns](#showing-only-specific-patterns) instead of the full catalog.
 
@@ -48,13 +48,13 @@ A patterns `title` is built from the name of the folder name for the pattern, e.
 
 Each folder can have the following files:
 
-- `template.hbs` A Handlebars template used to build the pattern's HTML (also supports .handlebars extension)
+- `template.hbs` A Handlebars template used to build the pattern's HTML
 - `data.json` *Optional* A JSON object that is passed into the Handlebars template
 - `README.md` *Optional* A Markdown formatted text file which can be used to give additional description/notes to the pattern
 
 ### Same template, different data
 
-It's possible to have variants of patterns listed in the patterns list that share the same template but that have different data. A good use case for this is form items where it would be advantagous to only write the markup for a field once, but where you wish to show examples for different types (e.g. `text`, `email` etc).
+It's possible to have variants of patterns listed in the patterns list that share the same template but that have different data. A good use case for this is form items where it would be advantageous to only write the markup for a field once, but where you wish to show examples for different types (e.g. `text`, `email` etc).
 
 To make a special case of a pattern duplicate the name and append a `~` followed by a unique identifier. For example if you have a pattern `elements/forms/input` you could create `elements/forms/input~email` to provide info on email specific rendering. The template from `input` will be used but the data and notes will be taken from the new pattern.
 
@@ -66,13 +66,21 @@ Any pattern can be included within another by using a custom Handlebars helper, 
 		{{ #inc elements/forms/input }}
 	</div>
 
-Data from the included pattern will be loaded for it by default. If you want to override the data in the parent pattern you can add it to the parent patterns `data.json` with a key that matches the last part of the included patterns `id` e.g. For the above example we would have something like:
+The `#inc` helper is compatible with the standard `{{> partial}}` Handlebars syntax except that it will also load default pattern data too. If you want to override the data passed into the included pattern from the parent pattern you can either:
 
-	{
-		"input": {
-			"title": "Sub Pattern Title"
-		}
-	}
+1. Pass in an object to be used as the context for the pattern (defined in `data.json`)
+
+	{{ #inc elements/forms/input childPatternData }}
+
+2. Pass in key value pairs
+
+	{{ #inc elements/forms/input type="email" id="customer-email" }}
+
+Data available in the child pattern is resolved as follows:
+
+	- Default pattern data loaded from included patterns `data.json` *(lowest priority)*
+	- Current pattern context
+	- Inline data passed in via the `#inc` function *(highest priority)*
 
 ## Templates
 
@@ -82,39 +90,19 @@ Templates are just special cases of Patterns and are located in the `patterns/te
 
 Would load the template found in `patterns/templates/home`.
 
-### Using data aliases	
-Sometimes it will be desirable to show the same pattern multiple times within the same template but each time with different data (e.g. Prototyping a form with multiple inputs). To handle this usecase the `#inc` helper can take an optional second parameter which allows for an alias to be used to load different data.
+## Views
 
-If the template looked like the following:
-
-	<div class="sub-pattern">
-		{{ #inc elements/forms/input data="name" }}
-		{{ #inc elements/forms/input data="email" }}
-	</div>
-
-The template `data.json` would look like this:
-
-	{
-		"input:name": {
-			"title": "What is your name?",
-			"type": "text"
-		},
-
-		"input:email": {
-			"title": "What is your email?",
-			"type": "email"
-		}
-	}
+Views are used to render higher level aspects of the pattern library, this is mostly related to the chrome surrounding patterns, groups and sections. One exception is `[Primer Directory]/views/template.hbs`, this is used as the base for all Templates that you create and is where you can add/remove assets to be loaded on each page.
 
 ## Custom Views
 
-Each template can use a seperate View if required, to change the View just set the `view` variable in the `data.json` file, e.g.
+Each template can use a separate View if required, to change the View just set the `view` variable in the `data.json` file, e.g.
 
 	{
 		"view": "custom-view"
 	}
 
-Would use the view: `views/custom-view.hbs`. The default value for `view` is `template`.
+Would use the view: `views/custom-view.hbs`.
 
 ## Advanced Usage
 
@@ -124,7 +112,51 @@ Multiple patterns/groups can be isolated, enabling a custom list of items to be 
 
 	/patterns/elements/forms/button:elements/forms/input
 
-## CLI
+### Events
+
+Primer is built around an Event system that makes it easier to extend. To listen to an event you simply need to call:
+
+	Event::listen('eventname', function () {
+	    // Do stuff here
+	});
+
+`bootstrap/start.php` contains some examples of events but for clarity here is a list:
+
+- #### CLI Initialisation
+
+	Called when the CLI instance is created. This is useful for extending the CLI with custom commands.
+
+		Event::listen('cli.init', function ($cli) {
+		    $cli->add(new \App\Commands\Export);
+		});
+
+	Commands need to extend Symfony's `Symfony\Component\Console\Command\Command` class.
+
+- #### Handlebars Engine Initialisation
+	
+	Called when the Handlebars engine is created. Useful for registering custom helpers with the Handlebars engine.
+
+		Event::listen('handlebars.init', function ($handlebars) {
+
+		});
+
+- #### View Data Loaded
+	
+	Called whenever a `data.json` file is loaded. Provides a way to modify a patterns default data prior to it being merged with other context data. Can be used to pass in dynamic data to a pattern that couldn't otherwise be read from a flat `data.json` file.
+
+		ViewData::composer('elements/forms/input', function ($data) {
+		    $data->label = 'boo yah!';
+		});
+
+- #### Pattern Loaded
+	
+	Called whenever a pattern is about to be rendered.  At this point `$data` is the result of merging the patterns default data and other context data
+
+		Pattern::composer('elements/forms/input', function ($data) {
+		    $data->label = 'boo yah!';
+		});
+
+### CLI
 
 There is a CLI as a convenience for creating new patterns. When in the root directory you can do the following:
 
