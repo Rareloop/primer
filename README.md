@@ -66,7 +66,7 @@ Any pattern can be included within another by using a custom Handlebars helper, 
 		{{ #inc elements/forms/input }}
 	</div>
 
-The `#inc` helper is compatible with the standard `{{> partial}}` Handlebars syntax except that it will also load default pattern data too. If you want to override the data passed into the included pattern from the parent pattern you can either:
+The `#inc` helper is compatible with the standard `{{> partial}}` [Handlebars syntax](http://handlebarsjs.com/partials.html) except that it will also load default pattern data too. If you want to override the data passed into the included pattern from the parent pattern you can either:
 
 1. Pass in an object to be used as the context for the pattern (defined in `data.json`)
 
