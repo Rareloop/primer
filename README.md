@@ -70,11 +70,11 @@ The `#inc` helper is compatible with the standard `{{> partial}}` [Handlebars sy
 
 1. Pass in an object to be used as the context for the pattern (defined in `data.json`)
 
-	{{ #inc elements/forms/input childPatternData }}
+		{{ #inc elements/forms/input childPatternData }}
 
 2. Pass in key value pairs
 
-	{{ #inc elements/forms/input type="email" id="customer-email" }}
+		{{ #inc elements/forms/input type="email" id="customer-email" }}
 
 Data available in the child pattern is resolved as follows:
 
