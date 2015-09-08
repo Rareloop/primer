@@ -104,6 +104,14 @@ Each template can use a separate View if required, to change the View just set t
 
 Would use the view: `views/custom-view.hbs`.
 
+## Using different template engines
+
+Since `v2.0.0`, Primer supports different template engines beyond just Handlebars. This makes it easier to tailor Primer to your teams template preference and makes it easier to integrate patterns into a back end system/CMS. We currently have 3 engines implemented:
+
+- [Handlebars](https://github.com/Rareloop/primer-template-engine-handlebars) (default)
+- [Twig](https://github.com/Rareloop/primer-template-engine-twig)
+- [Blade](https://github.com/Rareloop/primer-template-engine-blade)
+
 ## Advanced Usage
 
 ### Showing only specific patterns
@@ -160,6 +168,6 @@ Primer is built around an Event system that makes it easier to extend. To listen
 
 There is a CLI as a convenience for creating new patterns. When in the root directory you can do the following:
 
-    php serve pattern:make components/cards/news-card
+    php primer pattern:make components/cards/news-card
     
 This would create a new pattern directory and placeholder `template.hbs` & `data.json` files.
