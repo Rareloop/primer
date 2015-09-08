@@ -78,9 +78,9 @@ The `#inc` helper is compatible with the standard `{{> partial}}` Handlebars syn
 
 Data available in the child pattern is resolved as follows:
 
-	- Default pattern data loaded from included patterns `data.json` *(lowest priority)*
-	- Current pattern context
-	- Inline data passed in via the `#inc` function *(highest priority)*
+- Default pattern data loaded from included patterns `data.json` *(lowest priority)*
+- Current pattern context
+- Inline data passed in via the `#inc` function *(highest priority)*
 
 ## Templates
 
