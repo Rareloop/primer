@@ -23,15 +23,10 @@
 
     "require": {
         "rareloop/primer-core": "dev-multi-template-engines",
-        "rareloop/primer-template-engine-handlebars": "dev-master",
-        "rareloop/primer-template-engine-blade": "dev-master",
         "rareloop/primer-template-engine-twig": "dev-master",
         "altorouter/altorouter": "1.1.0",
         "philo/laravel-blade": "3.*",
-        "twig/twig": "~1.0",
-
-        "illuminate/view": "~5.0.0",
-        "illuminate/events": "~5.0.0"
+        "twig/twig": "~1.0"
     },
 
     "require-dev": {

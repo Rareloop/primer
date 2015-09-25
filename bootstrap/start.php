@@ -58,7 +58,7 @@ ViewData::composer('elements/forms/input', function ($data) {
  */
 $primer = \Rareloop\Primer\Primer::start(array(
     'basePath' => __DIR__.'/..', 
-    'templateClass' => 'Rareloop\Primer\TemplateEngine\Blade\Template'
+    'templateClass' => 'Rareloop\Primer\TemplateEngine\Twig\Template'
 ));
 
 return $primer;

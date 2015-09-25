@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "e460ff848c4abf9f4ac24eb4eeb66ce0",
+    "hash": "39f7fa0d451f6b9ee152b2221063d38d",
     "packages": [
         {
             "name": "altorouter/altorouter",
@@ -119,12 +119,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/doctrine/inflector.git",
-                "reference": "a081a0c2f14486254464f1a657595f5a6b3092f4"
+                "reference": "3a422c73f7bc556d39571f436b61fd58ccae0eb0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/doctrine/inflector/zipball/a081a0c2f14486254464f1a657595f5a6b3092f4",
-                "reference": "a081a0c2f14486254464f1a657595f5a6b3092f4",
+                "url": "https://api.github.com/repos/doctrine/inflector/zipball/3a422c73f7bc556d39571f436b61fd58ccae0eb0",
+                "reference": "3a422c73f7bc556d39571f436b61fd58ccae0eb0",
                 "shasum": ""
             },
             "require": {
@@ -178,7 +178,7 @@
                 "singularize",
                 "string"
             ],
-            "time": "2015-09-02 15:55:05"
+            "time": "2015-09-17 13:29:15"
         },
         {
             "name": "gajus/dindent",
@@ -227,26 +227,26 @@
         },
         {
             "name": "illuminate/container",
-            "version": "5.0.x-dev",
+            "version": "5.1.x-dev",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/container.git",
-                "reference": "c5a78e53ef15204469b5b072d390af9785a82d32"
+                "reference": "e70593245aa175f81679c18e4f3673eba353ac07"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/illuminate/container/zipball/c5a78e53ef15204469b5b072d390af9785a82d32",
-                "reference": "c5a78e53ef15204469b5b072d390af9785a82d32",
+                "url": "https://api.github.com/repos/illuminate/container/zipball/e70593245aa175f81679c18e4f3673eba353ac07",
+                "reference": "e70593245aa175f81679c18e4f3673eba353ac07",
                 "shasum": ""
             },
             "require": {
-                "illuminate/contracts": "5.0.*",
-                "php": ">=5.4.0"
+                "illuminate/contracts": "5.1.*",
+                "php": ">=5.5.9"
             },
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "5.0-dev"
+                    "dev-master": "5.1-dev"
                 }
             },
             "autoload": {
@@ -266,29 +266,29 @@
             ],
             "description": "The Illuminate Container package.",
             "homepage": "http://laravel.com",
-            "time": "2015-05-29 20:16:27"
+            "time": "2015-09-24 11:16:48"
         },
         {
             "name": "illuminate/contracts",
-            "version": "5.0.x-dev",
+            "version": "5.1.x-dev",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/contracts.git",
-                "reference": "6d23815fee6057b29cab8094af8cbb8ce3ac82e4"
+                "reference": "6e828a355b7a467232efad3dbe76df17463178e3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/illuminate/contracts/zipball/6d23815fee6057b29cab8094af8cbb8ce3ac82e4",
-                "reference": "6d23815fee6057b29cab8094af8cbb8ce3ac82e4",
+                "url": "https://api.github.com/repos/illuminate/contracts/zipball/6e828a355b7a467232efad3dbe76df17463178e3",
+                "reference": "6e828a355b7a467232efad3dbe76df17463178e3",
                 "shasum": ""
             },
             "require": {
-                "php": ">=5.4.0"
+                "php": ">=5.5.9"
             },
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "5.0-dev"
+                    "dev-master": "5.1-dev"
                 }
             },
             "autoload": {
@@ -308,32 +308,32 @@
             ],
             "description": "The Illuminate Contracts package.",
             "homepage": "http://laravel.com",
-            "time": "2015-05-15 07:22:28"
+            "time": "2015-09-24 11:16:48"
         },
         {
             "name": "illuminate/events",
-            "version": "5.0.x-dev",
+            "version": "5.1.x-dev",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/events.git",
-                "reference": "1c43c913b82521558d44a120f0735bbe84d53cbb"
+                "reference": "8ffe2b316c595477f621a78fee0f64d8fc175bfa"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/illuminate/events/zipball/1c43c913b82521558d44a120f0735bbe84d53cbb",
-                "reference": "1c43c913b82521558d44a120f0735bbe84d53cbb",
+                "url": "https://api.github.com/repos/illuminate/events/zipball/8ffe2b316c595477f621a78fee0f64d8fc175bfa",
+                "reference": "8ffe2b316c595477f621a78fee0f64d8fc175bfa",
                 "shasum": ""
             },
             "require": {
-                "illuminate/container": "5.0.*",
-                "illuminate/contracts": "5.0.*",
-                "illuminate/support": "5.0.*",
-                "php": ">=5.4.0"
+                "illuminate/container": "5.1.*",
+                "illuminate/contracts": "5.1.*",
+                "illuminate/support": "5.1.*",
+                "php": ">=5.5.9"
             },
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "5.0-dev"
+                    "dev-master": "5.1-dev"
                 }
             },
             "autoload": {
@@ -353,37 +353,37 @@
             ],
             "description": "The Illuminate Events package.",
             "homepage": "http://laravel.com",
-            "time": "2015-05-11 12:49:26"
+            "time": "2015-09-23 13:19:23"
         },
         {
             "name": "illuminate/filesystem",
-            "version": "5.0.x-dev",
+            "version": "5.1.x-dev",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/filesystem.git",
-                "reference": "179770cc708cf7ac5469d4b813071226fa45686b"
+                "reference": "2cd81653614e3feb443914dd9f49b980cef36b85"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/illuminate/filesystem/zipball/179770cc708cf7ac5469d4b813071226fa45686b",
-                "reference": "179770cc708cf7ac5469d4b813071226fa45686b",
+                "url": "https://api.github.com/repos/illuminate/filesystem/zipball/2cd81653614e3feb443914dd9f49b980cef36b85",
+                "reference": "2cd81653614e3feb443914dd9f49b980cef36b85",
                 "shasum": ""
             },
             "require": {
-                "illuminate/contracts": "5.0.*",
-                "illuminate/support": "5.0.*",
-                "league/flysystem": "~1.0",
-                "php": ">=5.4.0",
-                "symfony/finder": "2.6.*"
+                "illuminate/contracts": "5.1.*",
+                "illuminate/support": "5.1.*",
+                "php": ">=5.5.9",
+                "symfony/finder": "2.7.*"
             },
             "suggest": {
-                "league/flysystem-aws-s3-v2": "Required to use the Flysystem S3 driver (~1.0).",
+                "league/flysystem": "Required to use the Flysystem local and FTP drivers (~1.0).",
+                "league/flysystem-aws-s3-v3": "Required to use the Flysystem S3 driver (~1.0).",
                 "league/flysystem-rackspace": "Required to use the Flysystem Rackspace driver (~1.0)."
             },
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "5.0-dev"
+                    "dev-master": "5.1-dev"
                 }
             },
             "autoload": {
@@ -403,37 +403,37 @@
             ],
             "description": "The Illuminate Filesystem package.",
             "homepage": "http://laravel.com",
-            "time": "2015-05-15 07:22:28"
+            "time": "2015-08-24 08:44:48"
         },
         {
             "name": "illuminate/support",
-            "version": "5.0.x-dev",
+            "version": "5.1.x-dev",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/support.git",
-                "reference": "28dcacacd2091c106e352db1732eda8c590914f6"
+                "reference": "09d14175a8ca5adf8b1eb17d617f9ecd388de6d3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/illuminate/support/zipball/28dcacacd2091c106e352db1732eda8c590914f6",
-                "reference": "28dcacacd2091c106e352db1732eda8c590914f6",
+                "url": "https://api.github.com/repos/illuminate/support/zipball/09d14175a8ca5adf8b1eb17d617f9ecd388de6d3",
+                "reference": "09d14175a8ca5adf8b1eb17d617f9ecd388de6d3",
                 "shasum": ""
             },
             "require": {
                 "danielstjules/stringy": "~1.8",
                 "doctrine/inflector": "~1.0",
                 "ext-mbstring": "*",
-                "illuminate/contracts": "5.0.*",
-                "php": ">=5.4.0"
+                "illuminate/contracts": "5.1.*",
+                "php": ">=5.5.9"
             },
             "suggest": {
                 "jeremeamia/superclosure": "Required to be able to serialize closures (~2.0).",
-                "symfony/var-dumper": "Required to use the dd function (2.6.*)."
+                "symfony/var-dumper": "Required to use the dd function (2.7.*)."
             },
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "5.0-dev"
+                    "dev-master": "5.1-dev"
                 }
             },
             "autoload": {
@@ -456,33 +456,34 @@
             ],
             "description": "The Illuminate Support package.",
             "homepage": "http://laravel.com",
-            "time": "2015-06-04 12:15:51"
+            "time": "2015-09-18 23:38:16"
         },
         {
             "name": "illuminate/view",
-            "version": "5.0.x-dev",
+            "version": "5.1.x-dev",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/view.git",
-                "reference": "742f7db051a61e35f458405df464ad6fcf578dd0"
+                "reference": "52df86af929474790e4fd781fbf2380b48c5f20f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/illuminate/view/zipball/742f7db051a61e35f458405df464ad6fcf578dd0",
-                "reference": "742f7db051a61e35f458405df464ad6fcf578dd0",
+                "url": "https://api.github.com/repos/illuminate/view/zipball/52df86af929474790e4fd781fbf2380b48c5f20f",
+                "reference": "52df86af929474790e4fd781fbf2380b48c5f20f",
                 "shasum": ""
             },
             "require": {
-                "illuminate/container": "5.0.*",
-                "illuminate/contracts": "5.0.*",
-                "illuminate/filesystem": "5.0.*",
-                "illuminate/support": "5.0.*",
-                "php": ">=5.4.0"
+                "illuminate/container": "5.1.*",
+                "illuminate/contracts": "5.1.*",
+                "illuminate/events": "5.1.*",
+                "illuminate/filesystem": "5.1.*",
+                "illuminate/support": "5.1.*",
+                "php": ">=5.5.9"
             },
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "5.0-dev"
+                    "dev-master": "5.1-dev"
                 }
             },
             "autoload": {
@@ -502,88 +503,7 @@
             ],
             "description": "The Illuminate View package.",
             "homepage": "http://laravel.com",
-            "time": "2015-04-23 13:53:55"
-        },
-        {
-            "name": "league/flysystem",
-            "version": "dev-master",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/thephpleague/flysystem.git",
-                "reference": "e3f7ddb789bcff377c26dd91fb0f98273a386063"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/thephpleague/flysystem/zipball/e3f7ddb789bcff377c26dd91fb0f98273a386063",
-                "reference": "e3f7ddb789bcff377c26dd91fb0f98273a386063",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=5.4.0"
-            },
-            "require-dev": {
-                "ext-fileinfo": "*",
-                "mockery/mockery": "~0.9",
-                "phpspec/phpspec": "^2.2",
-                "phpspec/prophecy-phpunit": "~1.0",
-                "phpunit/phpunit": "~4.1"
-            },
-            "suggest": {
-                "ext-fileinfo": "Required for MimeType",
-                "league/flysystem-aws-s3-v2": "Allows you to use S3 storage with AWS SDK v2",
-                "league/flysystem-aws-s3-v3": "Allows you to use S3 storage with AWS SDK v3",
-                "league/flysystem-azure": "Allows you to use Windows Azure Blob storage",
-                "league/flysystem-cached-adapter": "Flysystem adapter decorator for metadata caching",
-                "league/flysystem-copy": "Allows you to use Copy.com storage",
-                "league/flysystem-dropbox": "Allows you to use Dropbox storage",
-                "league/flysystem-eventable-filesystem": "Allows you to use EventableFilesystem",
-                "league/flysystem-rackspace": "Allows you to use Rackspace Cloud Files",
-                "league/flysystem-sftp": "Allows you to use SFTP server storage via phpseclib",
-                "league/flysystem-webdav": "Allows you to use WebDAV storage",
-                "league/flysystem-ziparchive": "Allows you to use ZipArchive adapter"
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "1.1-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "League\\Flysystem\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Frank de Jonge",
-                    "email": "info@frenky.net"
-                }
-            ],
-            "description": "Filesystem abstraction: Many filesystems, one API.",
-            "keywords": [
-                "Cloud Files",
-                "WebDAV",
-                "abstraction",
-                "aws",
-                "cloud",
-                "copy.com",
-                "dropbox",
-                "file systems",
-                "files",
-                "filesystem",
-                "filesystems",
-                "ftp",
-                "rackspace",
-                "remote",
-                "s3",
-                "sftp",
-                "storage"
-            ],
-            "time": "2015-08-13 14:37:37"
+            "time": "2015-09-08 18:20:30"
         },
         {
             "name": "michelf/php-markdown",
@@ -729,12 +649,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/joelambert/primer-core.git",
-                "reference": "d56a6403ff37e9f0bc67da0e66bfc13324fdc3e5"
+                "reference": "bd8bc0de89d4cc82fc44ecc766ed8b4d66fc1949"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/joelambert/primer-core/zipball/d56a6403ff37e9f0bc67da0e66bfc13324fdc3e5",
-                "reference": "d56a6403ff37e9f0bc67da0e66bfc13324fdc3e5",
+                "url": "https://api.github.com/repos/joelambert/primer-core/zipball/bd8bc0de89d4cc82fc44ecc766ed8b4d66fc1949",
+                "reference": "bd8bc0de89d4cc82fc44ecc766ed8b4d66fc1949",
                 "shasum": ""
             },
             "require": {
@@ -743,6 +663,7 @@
                 "symfony/console": "2.5.*",
                 "symfony/debug": "2.7.*",
                 "symfony/event-dispatcher": "2.3.*",
+                "symfony/finder": "2.7.*",
                 "xamin/handlebars.php": "0.10.*"
             },
             "type": "library",
@@ -755,76 +676,7 @@
             "support": {
                 "source": "https://github.com/joelambert/primer-core/tree/multi-template-engines"
             },
-            "time": "2015-09-03 12:26:36"
-        },
-        {
-            "name": "rareloop/primer-template-engine-blade",
-            "version": "dev-master",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/Rareloop/primer-template-engine-blade.git",
-                "reference": "ba6a4731a3df8eaa36a16640187868648eabcc58"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/Rareloop/primer-template-engine-blade/zipball/ba6a4731a3df8eaa36a16640187868648eabcc58",
-                "reference": "ba6a4731a3df8eaa36a16640187868648eabcc58",
-                "shasum": ""
-            },
-            "require": {
-                "illuminate/events": "~5.0.0",
-                "illuminate/view": "~5.0.0",
-                "philo/laravel-blade": "3.*"
-            },
-            "require-dev": {
-                "phpunit/phpunit": "4.8.*",
-                "symfony/finder": "2.6.*"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "Rareloop\\Primer\\TemplateEngine\\Blade\\": "src/Blade"
-                }
-            },
-            "description": "Blade template engine for Primer",
-            "support": {
-                "source": "https://github.com/Rareloop/primer-template-engine-blade/tree/master",
-                "issues": "https://github.com/Rareloop/primer-template-engine-blade/issues"
-            },
-            "time": "2015-09-04 13:54:01"
-        },
-        {
-            "name": "rareloop/primer-template-engine-handlebars",
-            "version": "dev-master",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/Rareloop/primer-template-engine-handlebars.git",
-                "reference": "bfb1a7a2cceaef92801c00b1d8441e167c52d3d1"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/Rareloop/primer-template-engine-handlebars/zipball/bfb1a7a2cceaef92801c00b1d8441e167c52d3d1",
-                "reference": "bfb1a7a2cceaef92801c00b1d8441e167c52d3d1",
-                "shasum": ""
-            },
-            "require": {
-                "xamin/handlebars.php": "0.10.*"
-            },
-            "require-dev": {
-                "phpunit/phpunit": "4.8.*"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "Rareloop\\Primer\\TemplateEngine\\Handlebars\\": "src/Handlebars"
-                }
-            },
-            "description": "Handlebars template engine for Primer",
-            "support": {
-                "source": "https://github.com/Rareloop/primer-template-engine-handlebars/tree/master",
-                "issues": "https://github.com/Rareloop/primer-template-engine-handlebars/issues"
-            },
-            "time": "2015-09-04 13:54:18"
+            "time": "2015-09-21 09:40:54"
         },
         {
             "name": "rareloop/primer-template-engine-twig",
@@ -832,12 +684,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/Rareloop/primer-template-engine-twig.git",
-                "reference": "fb7ca6eaadf57d37b57bb7839e36848d0749acdb"
+                "reference": "2b02a29126628e1d04f47f85abbfc6160f9b82c6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Rareloop/primer-template-engine-twig/zipball/fb7ca6eaadf57d37b57bb7839e36848d0749acdb",
-                "reference": "fb7ca6eaadf57d37b57bb7839e36848d0749acdb",
+                "url": "https://api.github.com/repos/Rareloop/primer-template-engine-twig/zipball/2b02a29126628e1d04f47f85abbfc6160f9b82c6",
+                "reference": "2b02a29126628e1d04f47f85abbfc6160f9b82c6",
                 "shasum": ""
             },
             "require": {
@@ -857,7 +709,7 @@
                 "source": "https://github.com/Rareloop/primer-template-engine-twig/tree/master",
                 "issues": "https://github.com/Rareloop/primer-template-engine-twig/issues"
             },
-            "time": "2015-09-04 13:53:40"
+            "time": "2015-09-18 09:36:02"
         },
         {
             "name": "symfony/console",
@@ -920,12 +772,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/Debug.git",
-                "reference": "726bf9651d29f53243281d0b6418cfaa5e318281"
+                "reference": "c79c361bca8e5ada6a47603875a3c964d03b67b1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/Debug/zipball/726bf9651d29f53243281d0b6418cfaa5e318281",
-                "reference": "726bf9651d29f53243281d0b6418cfaa5e318281",
+                "url": "https://api.github.com/repos/symfony/Debug/zipball/c79c361bca8e5ada6a47603875a3c964d03b67b1",
+                "reference": "c79c361bca8e5ada6a47603875a3c964d03b67b1",
                 "shasum": ""
             },
             "require": {
@@ -967,7 +819,7 @@
             ],
             "description": "Symfony Debug Component",
             "homepage": "https://symfony.com",
-            "time": "2015-08-29 11:12:16"
+            "time": "2015-09-14 08:41:38"
         },
         {
             "name": "symfony/event-dispatcher",
@@ -976,12 +828,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/EventDispatcher.git",
-                "reference": "af8fba40bdab97fc666173a8c2087e02445c231c"
+                "reference": "708b106f00ea634b2acc7d0ec89689c914e446b0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/EventDispatcher/zipball/af8fba40bdab97fc666173a8c2087e02445c231c",
-                "reference": "af8fba40bdab97fc666173a8c2087e02445c231c",
+                "url": "https://api.github.com/repos/symfony/EventDispatcher/zipball/708b106f00ea634b2acc7d0ec89689c914e446b0",
+                "reference": "708b106f00ea634b2acc7d0ec89689c914e446b0",
                 "shasum": ""
             },
             "require": {
@@ -1022,25 +874,24 @@
             ],
             "description": "Symfony EventDispatcher Component",
             "homepage": "https://symfony.com",
-            "time": "2015-05-15 13:28:34"
+            "time": "2015-09-17 01:42:05"
         },
         {
             "name": "symfony/finder",
-            "version": "2.6.x-dev",
-            "target-dir": "Symfony/Component/Finder",
+            "version": "2.7.x-dev",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/Finder.git",
-                "reference": "203a10f928ae30176deeba33512999233181dd28"
+                "reference": "8262ab605973afbb3ef74b945daabf086f58366f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/Finder/zipball/203a10f928ae30176deeba33512999233181dd28",
-                "reference": "203a10f928ae30176deeba33512999233181dd28",
+                "url": "https://api.github.com/repos/symfony/Finder/zipball/8262ab605973afbb3ef74b945daabf086f58366f",
+                "reference": "8262ab605973afbb3ef74b945daabf086f58366f",
                 "shasum": ""
             },
             "require": {
-                "php": ">=5.3.3"
+                "php": ">=5.3.9"
             },
             "require-dev": {
                 "symfony/phpunit-bridge": "~2.7"
@@ -1048,11 +899,11 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "2.6-dev"
+                    "dev-master": "2.7-dev"
                 }
             },
             "autoload": {
-                "psr-0": {
+                "psr-4": {
                     "Symfony\\Component\\Finder\\": ""
                 }
             },
@@ -1072,7 +923,7 @@
             ],
             "description": "Symfony Finder Component",
             "homepage": "https://symfony.com",
-            "time": "2015-07-09 16:02:48"
+            "time": "2015-09-19 19:59:23"
         },
         {
             "name": "twig/twig",
@@ -1080,12 +931,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/twigphp/Twig.git",
-                "reference": "b1a4c14b6076cd180b7133a1ded15efd18b2390e"
+                "reference": "604e94883bc1691071d9a30ff522808dc476394c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/twigphp/Twig/zipball/b1a4c14b6076cd180b7133a1ded15efd18b2390e",
-                "reference": "b1a4c14b6076cd180b7133a1ded15efd18b2390e",
+                "url": "https://api.github.com/repos/twigphp/Twig/zipball/604e94883bc1691071d9a30ff522808dc476394c",
+                "reference": "604e94883bc1691071d9a30ff522808dc476394c",
                 "shasum": ""
             },
             "require": {
@@ -1098,7 +949,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "1.21-dev"
+                    "dev-master": "1.22-dev"
                 }
             },
             "autoload": {
@@ -1133,7 +984,7 @@
             "keywords": [
                 "templating"
             ],
-            "time": "2015-09-01 09:38:14"
+            "time": "2015-09-24 14:39:22"
         },
         {
             "name": "xamin/handlebars.php",
@@ -1288,12 +1139,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/phpspec/prophecy.git",
-                "reference": "80da5500014051b9e70740f183c5e5586f38f977"
+                "reference": "4f9b1eaf0a7da77c362f8d91cbc68ab1f4718d62"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phpspec/prophecy/zipball/80da5500014051b9e70740f183c5e5586f38f977",
-                "reference": "80da5500014051b9e70740f183c5e5586f38f977",
+                "url": "https://api.github.com/repos/phpspec/prophecy/zipball/4f9b1eaf0a7da77c362f8d91cbc68ab1f4718d62",
+                "reference": "4f9b1eaf0a7da77c362f8d91cbc68ab1f4718d62",
                 "shasum": ""
             },
             "require": {
@@ -1340,7 +1191,7 @@
                 "spy",
                 "stub"
             ],
-            "time": "2015-08-13 10:25:47"
+            "time": "2015-09-22 14:49:23"
         },
         {
             "name": "phpunit/php-code-coverage",
@@ -1348,12 +1199,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/php-code-coverage.git",
-                "reference": "ab2283bf4a836d7f2ec5f33c15d6802d9f4cb512"
+                "reference": "ef1ca6835468857944d5c3b48fa503d5554cff2f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/php-code-coverage/zipball/ab2283bf4a836d7f2ec5f33c15d6802d9f4cb512",
-                "reference": "ab2283bf4a836d7f2ec5f33c15d6802d9f4cb512",
+                "url": "https://api.github.com/repos/sebastianbergmann/php-code-coverage/zipball/ef1ca6835468857944d5c3b48fa503d5554cff2f",
+                "reference": "ef1ca6835468857944d5c3b48fa503d5554cff2f",
                 "shasum": ""
             },
             "require": {
@@ -1402,7 +1253,7 @@
                 "testing",
                 "xunit"
             ],
-            "time": "2015-09-01 12:25:27"
+            "time": "2015-09-14 06:51:16"
         },
         {
             "name": "phpunit/php-file-iterator",
@@ -1539,12 +1390,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/php-token-stream.git",
-                "reference": "92d472f7ac0cd45b7f6d66cb807646432cf89f5d"
+                "reference": "cab6c6fefee93d7b7c3a01292a0fe0884ea66644"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/php-token-stream/zipball/92d472f7ac0cd45b7f6d66cb807646432cf89f5d",
-                "reference": "92d472f7ac0cd45b7f6d66cb807646432cf89f5d",
+                "url": "https://api.github.com/repos/sebastianbergmann/php-token-stream/zipball/cab6c6fefee93d7b7c3a01292a0fe0884ea66644",
+                "reference": "cab6c6fefee93d7b7c3a01292a0fe0884ea66644",
                 "shasum": ""
             },
             "require": {
@@ -1580,7 +1431,7 @@
             "keywords": [
                 "tokenizer"
             ],
-            "time": "2015-08-18 15:47:59"
+            "time": "2015-09-23 14:46:55"
         },
         {
             "name": "phpunit/phpunit",
@@ -1588,12 +1439,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/phpunit.git",
-                "reference": "c0a9c60434bc8a94115efe40d97f4348352c831a"
+                "reference": "73fad41adb5b7bc3a494bb930d90648df1d5e74b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/c0a9c60434bc8a94115efe40d97f4348352c831a",
-                "reference": "c0a9c60434bc8a94115efe40d97f4348352c831a",
+                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/73fad41adb5b7bc3a494bb930d90648df1d5e74b",
+                "reference": "73fad41adb5b7bc3a494bb930d90648df1d5e74b",
                 "shasum": ""
             },
             "require": {
@@ -1652,7 +1503,7 @@
                 "testing",
                 "xunit"
             ],
-            "time": "2015-09-02 07:15:27"
+            "time": "2015-09-20 12:56:44"
         },
         {
             "name": "phpunit/phpunit-mock-objects",
@@ -2088,12 +1939,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/Yaml.git",
-                "reference": "737b5ca48a451f5e4ed542aae7ed1ab6996bd7eb"
+                "reference": "b68154f3ee23d8294936433fd31725a83bd02f71"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/Yaml/zipball/737b5ca48a451f5e4ed542aae7ed1ab6996bd7eb",
-                "reference": "737b5ca48a451f5e4ed542aae7ed1ab6996bd7eb",
+                "url": "https://api.github.com/repos/symfony/Yaml/zipball/b68154f3ee23d8294936433fd31725a83bd02f71",
+                "reference": "b68154f3ee23d8294936433fd31725a83bd02f71",
                 "shasum": ""
             },
             "require": {
@@ -2129,15 +1980,13 @@
             ],
             "description": "Symfony Yaml Component",
             "homepage": "https://symfony.com",
-            "time": "2015-08-24 07:21:16"
+            "time": "2015-09-14 14:15:24"
         }
     ],
     "aliases": [],
     "minimum-stability": "dev",
     "stability-flags": {
         "rareloop/primer-core": 20,
-        "rareloop/primer-template-engine-handlebars": 20,
-        "rareloop/primer-template-engine-blade": 20,
         "rareloop/primer-template-engine-twig": 20
     },
     "prefer-stable": false,
