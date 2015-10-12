@@ -1,11 +1,5 @@
 {
-	"view": "template",
-
 	"paragraph": {
 		"copy": "Test paragraph"
-	},
-
-	"paragraph:second": {
-		"copy": "Test paragraph second"
 	}
 }

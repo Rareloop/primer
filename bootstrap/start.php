@@ -5,6 +5,9 @@ use Rareloop\Primer\Renderable\Pattern;
 use Rareloop\Primer\Events\Event;
 use Rareloop\Primer\Templating\ViewData;
 
+use Rareloop\Primer\TemplateEngine\Twig\Template as TwigTemplateEngine;
+use Rareloop\Primer\TemplateEngine\Handlebars\Template as HandlebarsTemplateEngine;
+
 /**
  * Listen for when the CLI is created
  */
@@ -16,7 +19,7 @@ Event::listen('cli.init', function ($cli) {
  * Listen for whole page render events
  */
 Event::listen('render', function ($data) {
-    $data->environment = 'development';
+    $data->primer->environment = 'development';
 });
 
 /**
@@ -56,9 +59,11 @@ ViewData::composer('elements/forms/input', function ($data) {
  *
  * @var Primer
  */
-$primer = \Rareloop\Primer\Primer::start(array(
-    'basePath' => __DIR__.'/..', 
-    'templateClass' => 'Rareloop\Primer\TemplateEngine\Twig\Template'
-));
+$primer = \Rareloop\Primer\Primer::start([
+    'basePath' => __DIR__.'/..',
+    'templateClass' => TwigTemplateEngine::class,
+    'wrapTemplate' => false,
+    // 'templateClass' => HandlebarsTemplateEngine::class,
+]);
 
 return $primer;
