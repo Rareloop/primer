@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "432416e606f8d68b8c1af9ed746b32d5",
-    "content-hash": "715988fbd3116f91f81d94b5dcebc0b4",
+    "hash": "fab313787300c326714dd11688b7ce9e",
+    "content-hash": "e401e6aeced66448f6fbb2020e912f9f",
     "packages": [
         {
             "name": "altorouter/altorouter",
@@ -59,129 +59,6 @@
             "time": "2014-04-16 09:44:40"
         },
         {
-            "name": "danielstjules/stringy",
-            "version": "1.x-dev",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/danielstjules/Stringy.git",
-                "reference": "4749c205db47ee5b32e8d1adf6d9aff8db6caf3b"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/danielstjules/Stringy/zipball/4749c205db47ee5b32e8d1adf6d9aff8db6caf3b",
-                "reference": "4749c205db47ee5b32e8d1adf6d9aff8db6caf3b",
-                "shasum": ""
-            },
-            "require": {
-                "ext-mbstring": "*",
-                "php": ">=5.3.0"
-            },
-            "require-dev": {
-                "phpunit/phpunit": "~4.0"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "Stringy\\": "src/"
-                },
-                "files": [
-                    "src/Create.php"
-                ]
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Daniel St. Jules",
-                    "email": "danielst.jules@gmail.com",
-                    "homepage": "http://www.danielstjules.com"
-                }
-            ],
-            "description": "A string manipulation library with multibyte support",
-            "homepage": "https://github.com/danielstjules/Stringy",
-            "keywords": [
-                "UTF",
-                "helpers",
-                "manipulation",
-                "methods",
-                "multibyte",
-                "string",
-                "utf-8",
-                "utility",
-                "utils"
-            ],
-            "time": "2015-07-23 00:54:12"
-        },
-        {
-            "name": "doctrine/inflector",
-            "version": "dev-master",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/doctrine/inflector.git",
-                "reference": "097e7ba84f64a427e55008117ef2bb94096731dc"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/doctrine/inflector/zipball/097e7ba84f64a427e55008117ef2bb94096731dc",
-                "reference": "097e7ba84f64a427e55008117ef2bb94096731dc",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=5.3.2"
-            },
-            "require-dev": {
-                "phpunit/phpunit": "4.*"
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "1.0.x-dev"
-                }
-            },
-            "autoload": {
-                "psr-0": {
-                    "Doctrine\\Common\\Inflector\\": "lib/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Roman Borschel",
-                    "email": "roman@code-factory.org"
-                },
-                {
-                    "name": "Benjamin Eberlei",
-                    "email": "kontakt@beberlei.de"
-                },
-                {
-                    "name": "Guilherme Blanco",
-                    "email": "guilhermeblanco@gmail.com"
-                },
-                {
-                    "name": "Jonathan Wage",
-                    "email": "jonwage@gmail.com"
-                },
-                {
-                    "name": "Johannes Schmitt",
-                    "email": "schmittjoh@gmail.com"
-                }
-            ],
-            "description": "Common String Manipulations with regard to casing and singular/plural rules.",
-            "homepage": "http://www.doctrine-project.org",
-            "keywords": [
-                "inflection",
-                "pluralize",
-                "singularize",
-                "string"
-            ],
-            "time": "2015-10-07 18:00:26"
-        },
-        {
             "name": "gajus/dindent",
             "version": "1.0.0",
             "source": {
@@ -225,286 +102,6 @@
                 "indent"
             ],
             "time": "2014-04-16 09:40:22"
-        },
-        {
-            "name": "illuminate/container",
-            "version": "5.1.x-dev",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/illuminate/container.git",
-                "reference": "e70593245aa175f81679c18e4f3673eba353ac07"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/illuminate/container/zipball/e70593245aa175f81679c18e4f3673eba353ac07",
-                "reference": "e70593245aa175f81679c18e4f3673eba353ac07",
-                "shasum": ""
-            },
-            "require": {
-                "illuminate/contracts": "5.1.*",
-                "php": ">=5.5.9"
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "5.1-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Illuminate\\Container\\": ""
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Taylor Otwell",
-                    "email": "taylorotwell@gmail.com"
-                }
-            ],
-            "description": "The Illuminate Container package.",
-            "homepage": "http://laravel.com",
-            "time": "2015-09-24 11:16:48"
-        },
-        {
-            "name": "illuminate/contracts",
-            "version": "5.1.x-dev",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/illuminate/contracts.git",
-                "reference": "6e828a355b7a467232efad3dbe76df17463178e3"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/illuminate/contracts/zipball/6e828a355b7a467232efad3dbe76df17463178e3",
-                "reference": "6e828a355b7a467232efad3dbe76df17463178e3",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=5.5.9"
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "5.1-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Illuminate\\Contracts\\": ""
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Taylor Otwell",
-                    "email": "taylorotwell@gmail.com"
-                }
-            ],
-            "description": "The Illuminate Contracts package.",
-            "homepage": "http://laravel.com",
-            "time": "2015-09-24 11:16:48"
-        },
-        {
-            "name": "illuminate/events",
-            "version": "5.1.x-dev",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/illuminate/events.git",
-                "reference": "8ffe2b316c595477f621a78fee0f64d8fc175bfa"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/illuminate/events/zipball/8ffe2b316c595477f621a78fee0f64d8fc175bfa",
-                "reference": "8ffe2b316c595477f621a78fee0f64d8fc175bfa",
-                "shasum": ""
-            },
-            "require": {
-                "illuminate/container": "5.1.*",
-                "illuminate/contracts": "5.1.*",
-                "illuminate/support": "5.1.*",
-                "php": ">=5.5.9"
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "5.1-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Illuminate\\Events\\": ""
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Taylor Otwell",
-                    "email": "taylorotwell@gmail.com"
-                }
-            ],
-            "description": "The Illuminate Events package.",
-            "homepage": "http://laravel.com",
-            "time": "2015-09-23 13:19:23"
-        },
-        {
-            "name": "illuminate/filesystem",
-            "version": "5.1.x-dev",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/illuminate/filesystem.git",
-                "reference": "2cd81653614e3feb443914dd9f49b980cef36b85"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/illuminate/filesystem/zipball/2cd81653614e3feb443914dd9f49b980cef36b85",
-                "reference": "2cd81653614e3feb443914dd9f49b980cef36b85",
-                "shasum": ""
-            },
-            "require": {
-                "illuminate/contracts": "5.1.*",
-                "illuminate/support": "5.1.*",
-                "php": ">=5.5.9",
-                "symfony/finder": "2.7.*"
-            },
-            "suggest": {
-                "league/flysystem": "Required to use the Flysystem local and FTP drivers (~1.0).",
-                "league/flysystem-aws-s3-v3": "Required to use the Flysystem S3 driver (~1.0).",
-                "league/flysystem-rackspace": "Required to use the Flysystem Rackspace driver (~1.0)."
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "5.1-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Illuminate\\Filesystem\\": ""
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Taylor Otwell",
-                    "email": "taylorotwell@gmail.com"
-                }
-            ],
-            "description": "The Illuminate Filesystem package.",
-            "homepage": "http://laravel.com",
-            "time": "2015-08-24 08:44:48"
-        },
-        {
-            "name": "illuminate/support",
-            "version": "5.1.x-dev",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/illuminate/support.git",
-                "reference": "e90a1c0cda9260e5ddaecbda0e66ec4502b09b42"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/illuminate/support/zipball/e90a1c0cda9260e5ddaecbda0e66ec4502b09b42",
-                "reference": "e90a1c0cda9260e5ddaecbda0e66ec4502b09b42",
-                "shasum": ""
-            },
-            "require": {
-                "danielstjules/stringy": "~1.8",
-                "doctrine/inflector": "~1.0",
-                "ext-mbstring": "*",
-                "illuminate/contracts": "5.1.*",
-                "php": ">=5.5.9"
-            },
-            "suggest": {
-                "jeremeamia/superclosure": "Required to be able to serialize closures (~2.0).",
-                "symfony/var-dumper": "Required to use the dd function (2.7.*)."
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "5.1-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Illuminate\\Support\\": ""
-                },
-                "files": [
-                    "helpers.php"
-                ]
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Taylor Otwell",
-                    "email": "taylorotwell@gmail.com"
-                }
-            ],
-            "description": "The Illuminate Support package.",
-            "homepage": "http://laravel.com",
-            "time": "2015-10-06 23:52:41"
-        },
-        {
-            "name": "illuminate/view",
-            "version": "5.1.x-dev",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/illuminate/view.git",
-                "reference": "a107dab53f5b4948faf531a38f4ac432ac860a37"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/illuminate/view/zipball/a107dab53f5b4948faf531a38f4ac432ac860a37",
-                "reference": "a107dab53f5b4948faf531a38f4ac432ac860a37",
-                "shasum": ""
-            },
-            "require": {
-                "illuminate/container": "5.1.*",
-                "illuminate/contracts": "5.1.*",
-                "illuminate/events": "5.1.*",
-                "illuminate/filesystem": "5.1.*",
-                "illuminate/support": "5.1.*",
-                "php": ">=5.5.9"
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "5.1-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Illuminate\\View\\": ""
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Taylor Otwell",
-                    "email": "taylorotwell@gmail.com"
-                }
-            ],
-            "description": "The Illuminate View package.",
-            "homepage": "http://laravel.com",
-            "time": "2015-09-30 04:10:43"
         },
         {
             "name": "michelf/php-markdown",
@@ -558,47 +155,6 @@
             "time": "2015-03-01 12:03:08"
         },
         {
-            "name": "philo/laravel-blade",
-            "version": "v3.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/PhiloNL/Laravel-Blade.git",
-                "reference": "728be672354bdd377da56394e699112ddfa0628b"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/PhiloNL/Laravel-Blade/zipball/728be672354bdd377da56394e699112ddfa0628b",
-                "reference": "728be672354bdd377da56394e699112ddfa0628b",
-                "shasum": ""
-            },
-            "require": {
-                "illuminate/events": "~5",
-                "illuminate/view": "~5"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "Philo\\Blade\\": "src"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Philo Hermans",
-                    "email": "me@philohermans.com"
-                }
-            ],
-            "description": "Use the simple and yet powerful Laravel Blade templating engine as a standalone component.",
-            "keywords": [
-                "blade",
-                "laravel"
-            ],
-            "time": "2015-04-18 21:03:31"
-        },
-        {
             "name": "psr/log",
             "version": "dev-master",
             "source": {
@@ -650,12 +206,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/joelambert/primer-core.git",
-                "reference": "390188a0e5834e4c1bd7a1ec38032237d7f8fed3"
+                "reference": "0740630e0983b789d3eaf0577fce7e48bb7e3cc2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/joelambert/primer-core/zipball/390188a0e5834e4c1bd7a1ec38032237d7f8fed3",
-                "reference": "390188a0e5834e4c1bd7a1ec38032237d7f8fed3",
+                "url": "https://api.github.com/repos/joelambert/primer-core/zipball/0740630e0983b789d3eaf0577fce7e48bb7e3cc2",
+                "reference": "0740630e0983b789d3eaf0577fce7e48bb7e3cc2",
                 "shasum": ""
             },
             "require": {
@@ -675,9 +231,42 @@
             },
             "description": "Core Primer framework",
             "support": {
-                "source": "https://github.com/joelambert/primer-core/tree/multi-template-engines"
+                "source": "https://github.com/joelambert/primer-core/tree/refactor"
             },
-            "time": "2015-09-30 07:56:49"
+            "time": "2015-10-15 19:41:29"
+        },
+        {
+            "name": "rareloop/primer-template-engine-handlebars",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Rareloop/primer-template-engine-handlebars.git",
+                "reference": "e12beeceabe3757ff44804f5ffe3576590da1d0e"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Rareloop/primer-template-engine-handlebars/zipball/e12beeceabe3757ff44804f5ffe3576590da1d0e",
+                "reference": "e12beeceabe3757ff44804f5ffe3576590da1d0e",
+                "shasum": ""
+            },
+            "require": {
+                "xamin/handlebars.php": "0.10.*"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "4.8.*"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Rareloop\\Primer\\TemplateEngine\\Handlebars\\": "src/Handlebars"
+                }
+            },
+            "description": "Handlebars template engine for Primer",
+            "support": {
+                "source": "https://github.com/Rareloop/primer-template-engine-handlebars/tree/master",
+                "issues": "https://github.com/Rareloop/primer-template-engine-handlebars/issues"
+            },
+            "time": "2015-10-15 20:02:18"
         },
         {
             "name": "rareloop/primer-template-engine-twig",
@@ -685,12 +274,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/Rareloop/primer-template-engine-twig.git",
-                "reference": "87670020d81567e0def81605c7c5cd6dd61dca25"
+                "reference": "9c2dba4d42dac8d7daa29dd9b78058a12d2fff0a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Rareloop/primer-template-engine-twig/zipball/87670020d81567e0def81605c7c5cd6dd61dca25",
-                "reference": "87670020d81567e0def81605c7c5cd6dd61dca25",
+                "url": "https://api.github.com/repos/Rareloop/primer-template-engine-twig/zipball/9c2dba4d42dac8d7daa29dd9b78058a12d2fff0a",
+                "reference": "9c2dba4d42dac8d7daa29dd9b78058a12d2fff0a",
                 "shasum": ""
             },
             "require": {
@@ -710,7 +299,7 @@
                 "source": "https://github.com/Rareloop/primer-template-engine-twig/tree/master",
                 "issues": "https://github.com/Rareloop/primer-template-engine-twig/issues"
             },
-            "time": "2015-09-30 07:37:28"
+            "time": "2015-10-12 19:47:55"
         },
         {
             "name": "symfony/console",
@@ -927,12 +516,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/twigphp/Twig.git",
-                "reference": "aa1596785b515a96cd10275849dc0408ffcfef12"
+                "reference": "656ecc0a5ce61c5b030eddb53c9e400fa99ee48a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/twigphp/Twig/zipball/aa1596785b515a96cd10275849dc0408ffcfef12",
-                "reference": "aa1596785b515a96cd10275849dc0408ffcfef12",
+                "url": "https://api.github.com/repos/twigphp/Twig/zipball/656ecc0a5ce61c5b030eddb53c9e400fa99ee48a",
+                "reference": "656ecc0a5ce61c5b030eddb53c9e400fa99ee48a",
                 "shasum": ""
             },
             "require": {
@@ -980,7 +569,7 @@
             "keywords": [
                 "templating"
             ],
-            "time": "2015-10-08 15:08:17"
+            "time": "2015-10-13 07:16:21"
         },
         {
             "name": "xamin/handlebars.php",
@@ -1435,12 +1024,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/phpunit.git",
-                "reference": "516bfb837a517d0e7d79492747aeb3873e89a0f6"
+                "reference": "be067d6105286b74272facefc2697038f8807b77"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/516bfb837a517d0e7d79492747aeb3873e89a0f6",
-                "reference": "516bfb837a517d0e7d79492747aeb3873e89a0f6",
+                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/be067d6105286b74272facefc2697038f8807b77",
+                "reference": "be067d6105286b74272facefc2697038f8807b77",
                 "shasum": ""
             },
             "require": {
@@ -1499,7 +1088,7 @@
                 "testing",
                 "xunit"
             ],
-            "time": "2015-10-10 00:04:13"
+            "time": "2015-10-14 13:49:40"
         },
         {
             "name": "phpunit/phpunit-mock-objects",
@@ -1792,16 +1381,16 @@
         },
         {
             "name": "sebastian/global-state",
-            "version": "1.1.0",
+            "version": "1.1.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/global-state.git",
-                "reference": "23af31f402993cfd94e99cbc4b782e9a78eb0e97"
+                "reference": "bc37d50fea7d017d3d340f230811c9f1d7280af4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/global-state/zipball/23af31f402993cfd94e99cbc4b782e9a78eb0e97",
-                "reference": "23af31f402993cfd94e99cbc4b782e9a78eb0e97",
+                "url": "https://api.github.com/repos/sebastianbergmann/global-state/zipball/bc37d50fea7d017d3d340f230811c9f1d7280af4",
+                "reference": "bc37d50fea7d017d3d340f230811c9f1d7280af4",
                 "shasum": ""
             },
             "require": {
@@ -1839,7 +1428,7 @@
             "keywords": [
                 "global state"
             ],
-            "time": "2015-06-21 15:11:22"
+            "time": "2015-10-12 03:26:01"
         },
         {
             "name": "sebastian/recursion-context",
@@ -1935,12 +1524,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/yaml.git",
-                "reference": "2941ac34966be9795beb3b854f12364380db8d60"
+                "reference": "8d32eb597b531eb915b4fee3dc582ade5ae1fe6a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/yaml/zipball/2941ac34966be9795beb3b854f12364380db8d60",
-                "reference": "2941ac34966be9795beb3b854f12364380db8d60",
+                "url": "https://api.github.com/repos/symfony/yaml/zipball/8d32eb597b531eb915b4fee3dc582ade5ae1fe6a",
+                "reference": "8d32eb597b531eb915b4fee3dc582ade5ae1fe6a",
                 "shasum": ""
             },
             "require": {
@@ -1973,14 +1562,15 @@
             ],
             "description": "Symfony Yaml Component",
             "homepage": "https://symfony.com",
-            "time": "2015-10-11 09:14:55"
+            "time": "2015-10-13 16:01:35"
         }
     ],
     "aliases": [],
     "minimum-stability": "dev",
     "stability-flags": {
         "rareloop/primer-core": 20,
-        "rareloop/primer-template-engine-twig": 20
+        "rareloop/primer-template-engine-twig": 20,
+        "rareloop/primer-template-engine-handlebars": 20
     },
     "prefer-stable": false,
     "prefer-lowest": false,

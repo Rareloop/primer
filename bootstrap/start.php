@@ -61,9 +61,16 @@ ViewData::composer('elements/forms/input', function ($data) {
  */
 $primer = \Rareloop\Primer\Primer::start([
     'basePath' => __DIR__.'/..',
-    'templateClass' => TwigTemplateEngine::class,
+
+    // 'templateClass' => TwigTemplateEngine::class,
+    // 'wrapTemplate' => false,
+    // 'patternPath' => __DIR__.'/../patterns-twig',
+    // 'viewPath' => __DIR__.'/../views-twig',
+
+    'templateClass' => HandlebarsTemplateEngine::class,
     'wrapTemplate' => false,
-    // 'templateClass' => HandlebarsTemplateEngine::class,
+    'patternPath' => __DIR__.'/../patterns-hbs',
+    'viewPath' => __DIR__.'/../views-hbs',
 ]);
 
 return $primer;
