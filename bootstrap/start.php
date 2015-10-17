@@ -33,16 +33,8 @@ Event::listen('handlebars.init', function ($handlebars) {
  * Listen for when a View (not pattern template) is about to be rendered
  * view.[viewName] - below example would call when views/pattern.handlebars is loaded
  */
-Event::listen('view.pattern', function ($data, $eventId) {
+View::composer('pattern', function ($data, $eventId) {
     // $data->id = 'testing';
-});
-
-/**
- * A function that calls anytime a pattern is about to be rendered
- * $data has already been merged at this stage
- */
-Pattern::composer('elements/forms/input', function ($data) {
-    // $data->label = 'boo yah!';
 });
 
 /**

@@ -206,12 +206,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/joelambert/primer-core.git",
-                "reference": "0740630e0983b789d3eaf0577fce7e48bb7e3cc2"
+                "reference": "556a01cce8593d3d5c495a0ab6acedb18912bf1d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/joelambert/primer-core/zipball/0740630e0983b789d3eaf0577fce7e48bb7e3cc2",
-                "reference": "0740630e0983b789d3eaf0577fce7e48bb7e3cc2",
+                "url": "https://api.github.com/repos/joelambert/primer-core/zipball/556a01cce8593d3d5c495a0ab6acedb18912bf1d",
+                "reference": "556a01cce8593d3d5c495a0ab6acedb18912bf1d",
                 "shasum": ""
             },
             "require": {
@@ -220,8 +220,10 @@
                 "symfony/console": "2.5.*",
                 "symfony/debug": "2.7.*",
                 "symfony/event-dispatcher": "2.3.*",
-                "symfony/finder": "2.7.*",
-                "xamin/handlebars.php": "0.10.*"
+                "symfony/finder": "2.7.*"
+            },
+            "require-dev": {
+                "rareloop/primer-template-engine-handlebars": "dev-master"
             },
             "type": "library",
             "autoload": {
@@ -233,7 +235,7 @@
             "support": {
                 "source": "https://github.com/joelambert/primer-core/tree/refactor"
             },
-            "time": "2015-10-15 19:41:29"
+            "time": "2015-10-17 13:42:43"
         },
         {
             "name": "rareloop/primer-template-engine-handlebars",
@@ -241,12 +243,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/Rareloop/primer-template-engine-handlebars.git",
-                "reference": "e12beeceabe3757ff44804f5ffe3576590da1d0e"
+                "reference": "a24ab80216eec9929424af78f18ae0597ab757b4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Rareloop/primer-template-engine-handlebars/zipball/e12beeceabe3757ff44804f5ffe3576590da1d0e",
-                "reference": "e12beeceabe3757ff44804f5ffe3576590da1d0e",
+                "url": "https://api.github.com/repos/Rareloop/primer-template-engine-handlebars/zipball/a24ab80216eec9929424af78f18ae0597ab757b4",
+                "reference": "a24ab80216eec9929424af78f18ae0597ab757b4",
                 "shasum": ""
             },
             "require": {
@@ -266,7 +268,7 @@
                 "source": "https://github.com/Rareloop/primer-template-engine-handlebars/tree/master",
                 "issues": "https://github.com/Rareloop/primer-template-engine-handlebars/issues"
             },
-            "time": "2015-10-15 20:02:18"
+            "time": "2015-10-16 19:05:06"
         },
         {
             "name": "rareloop/primer-template-engine-twig",
