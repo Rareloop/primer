@@ -243,12 +243,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/Rareloop/primer-template-engine-handlebars.git",
-                "reference": "a24ab80216eec9929424af78f18ae0597ab757b4"
+                "reference": "daad00916d5d75b13fb521790260252f227bd126"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Rareloop/primer-template-engine-handlebars/zipball/a24ab80216eec9929424af78f18ae0597ab757b4",
-                "reference": "a24ab80216eec9929424af78f18ae0597ab757b4",
+                "url": "https://api.github.com/repos/Rareloop/primer-template-engine-handlebars/zipball/daad00916d5d75b13fb521790260252f227bd126",
+                "reference": "daad00916d5d75b13fb521790260252f227bd126",
                 "shasum": ""
             },
             "require": {
@@ -268,7 +268,7 @@
                 "source": "https://github.com/Rareloop/primer-template-engine-handlebars/tree/master",
                 "issues": "https://github.com/Rareloop/primer-template-engine-handlebars/issues"
             },
-            "time": "2015-10-16 19:05:06"
+            "time": "2015-10-17 13:50:29"
         },
         {
             "name": "rareloop/primer-template-engine-twig",

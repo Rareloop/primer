@@ -4,6 +4,7 @@ use Rareloop\Primer\Primer;
 use Rareloop\Primer\Renderable\Pattern;
 use Rareloop\Primer\Events\Event;
 use Rareloop\Primer\Templating\ViewData;
+use Rareloop\Primer\Templating\View;
 
 use Rareloop\Primer\TemplateEngine\Twig\Template as TwigTemplateEngine;
 use Rareloop\Primer\TemplateEngine\Handlebars\Template as HandlebarsTemplateEngine;
