@@ -52,7 +52,7 @@ ViewData::composer('elements/forms/input', function ($data) {
  *
  * @var Primer
  */
-$primer = \Rareloop\Primer\Primer::start([
+$primer = Primer::start([
     'basePath' => __DIR__.'/..',
 
     // 'templateClass' => TwigTemplateEngine::class,
