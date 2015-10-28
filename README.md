@@ -5,7 +5,7 @@ Primer is a tool to aid with the design & development of a web site/app. It help
 Primer is: 
 
 - a prototyping tool
-- a useful resource for cataloging all the individual parts that make up yout style guide
+- a useful resource for cataloging all the individual parts that make up your style guide
 - a way to isolate/develop a single part of the overall system
 - a centralised place for designers, developers and product owners to refer to
 
@@ -27,7 +27,7 @@ This will start a standalone server from which you can begin to work in. By defa
 
 ## Patterns
 
-Patterns are the building blocks of your system and Primer provides a simple way to view your entire catalog or just a selection. Patterns are located in the `patterns` folder and are broken down into the following types:
+Patterns are the building blocks of your system and Primer provides a simple way to view your entire catalog, a selection or just a single item. Patterns are located in the `patterns` folder and are broken down into the following types:
 
 - `patterns/elements`: Basic building blocks, e.g. Headers, Form Elements etc
 - `patterns/components`: More complex objects that may incorporate many elements
@@ -44,47 +44,40 @@ Patterns are then further divided into groups, to allow multiple patterns to be 
 
 Each Pattern has an implicit `id` and `title`. The `id` is the path used to identify it under the patterns folder, e.g. `elements/forms/input`. `id`'s can be used to [show only specific patterns](#showing-only-specific-patterns) instead of the full catalog.
 
-A patterns `title` is built from the name of the folder name for the pattern, e.g. `elements/lists/ordered-list` => `Ordered List`.
+A patterns `title` is built from the name of the pattern's folder, e.g. `elements/lists/ordered-list` => `Ordered List`.
 
 Each folder can have the following files:
 
 - `template.hbs` A Handlebars template used to build the pattern's HTML
 - `data.json` *Optional* A JSON object that is passed into the Handlebars template
 - `README.md` *Optional* A Markdown formatted text file which can be used to give additional description/notes to the pattern
+- `init.php` *Optional* A script containing pattern specific code and event listeners
 
 ### Same template, different data
 
-It's possible to have variants of patterns listed in the patterns list that share the same template but that have different data. A good use case for this is form items where it would be advantageous to only write the markup for a field once, but where you wish to show examples for different types (e.g. `text`, `email` etc).
+When building any non-trivial design system, its common for elements/components/templates to have multi states. Take for example a login form, which will have a default state and also one or more error states. Primer makes it easy to handle these multiple states using Pattern Aliases, these special pattern instances share `template.hbs` files but load with unique data. 
 
-To make a special case of a pattern duplicate the name and append a `~` followed by a unique identifier. For example if you have a pattern `elements/forms/input` you could create `elements/forms/input~email` to provide info on email specific rendering. The template from `input` will be used but the data and notes will be taken from the new pattern.
+To make an alias for a pattern with `id` `components/forms/login` you could create `components/forms/login~error`. The Pattern Alias must share the same `id` as the parent pattern but be appended with `~` and a unique name.
 
 ### Including patterns within one another
 
-Any pattern can be included within another by using a custom Handlebars helper, e.g.
+Any pattern can be included within another by using the standard [Handlebars partial syntax](http://handlebarsjs.com/partials.html), e.g.
 
 	<div class="sub-pattern">
-		{{ #inc elements/forms/input }}
+		{{> elements/forms/input }}
 	</div>
 
-The `#inc` helper is compatible with the standard `{{> partial}}` [Handlebars syntax](http://handlebarsjs.com/partials.html) except that it will also load default pattern data too. If you want to override the data passed into the included pattern from the parent pattern you can either:
+Patterns can be included by the partial helper using their `id` (e.g. `{{> elements/forms/input }}`) but non Primer templates can also be loaded by passing a reference to the file without extension (e.g. `{{> elements/forms/input/test-partial }}`). 
 
-1. Pass in an object to be used as the context for the pattern (defined in `data.json`)
+The context passed to the partial can be manipulated in the standard ways possible using Handlebars ([more details](http://handlebarsjs.com/partials.html#partial-context)).
 
-		{{ #inc elements/forms/input childPatternData }}
-
-2. Pass in key value pairs
-
-		{{ #inc elements/forms/input type="email" id="customer-email" }}
-
-Data available in the child pattern is resolved as follows:
-
-- Default pattern data loaded from included patterns `data.json` *(lowest priority)*
-- Current pattern context
-- Inline data passed in via the `#inc` function *(highest priority)*
+*Pattern Aliases can not be included using the partial syntax*
 
 ## Templates
 
-Templates are just special cases of Patterns and are located in the `patterns/templates` folder. There is no requirement for grouping, or the level of grouping that is possible. To show a particular template you would use the `template` route, e.g.
+Templates are just special cases of Patterns and are located in the `patterns/templates` folder. With templates, there is no requirement for grouping.
+
+To view a particular template you would use the `template` route, e.g.
 
 	/template/home
 
@@ -92,25 +85,34 @@ Would load the template found in `patterns/templates/home`.
 
 ## Views
 
-Views are used to render higher level aspects of the pattern library, this is mostly related to the chrome surrounding patterns, groups and sections. One exception is `[Primer Directory]/views/template.hbs`, this is used as the base for all Templates that you create and is where you can add/remove assets to be loaded on each page.
+Views are used to render more Primer specific aspects of the pattern library, for example the chrome surrounding patterns, groups and sections. One exception is `[Primer Directory]/views/template.hbs`, this is used as the base for all Templates that you create and is where you can add/remove assets to be loaded on each page.
 
 ## Custom Views
 
-Each template can use a separate View if required, to change the View just set the `view` variable in the `data.json` file, e.g.
+Each page Template can be wrapped in a separate View if required, to change the View add the following to the Template's `data.json` file, e.g.
 
 	{
-		"view": "custom-view"
+		"primer": {
+			"view": "custom-view"
+		}
 	}
 
-Would use the view: `views/custom-view.hbs`.
+This would then use the view `views/custom-view.hbs` anytime the page template is rendered.
+
+It's also possible to disable the default wrapping of page Templates within a View. *This is more useful when using a template engine that supports inheritance.*
+
+	{
+		"primer": {
+		    "wrapTemplate": false
+		}
+	}
 
 ## Using different template engines
 
-Since `v2.0.0`, Primer supports different template engines beyond just Handlebars. This makes it easier to tailor Primer to your teams template preference and makes it easier to integrate patterns into a back end system/CMS. We currently have 3 engines implemented:
+Since `v2.0.0`, Primer supports different template engines beyond just Handlebars. This makes it easier to tailor Primer to your teams template preference and makes it easier to integrate patterns into a backend system/CMS. The following engines are currently implemented:
 
 - [Handlebars](https://github.com/Rareloop/primer-template-engine-handlebars) (default)
 - [Twig](https://github.com/Rareloop/primer-template-engine-twig)
-- [Blade](https://github.com/Rareloop/primer-template-engine-blade)
 
 ## Advanced Usage
 
@@ -120,6 +122,29 @@ Multiple patterns/groups can be isolated, enabling a custom list of items to be 
 
 	/patterns/elements/forms/button:elements/forms/input
 
+### Using different folders
+
+It's possible to pass more configuration parameters to Primer if you need to use non-standard folder locations (`bootstrap/start.php`):
+
+	$primer = Primer::start([
+	    'basePath' => __DIR__.'/..',
+	    'templateClass' => HandlebarsTemplateEngine::class,
+
+	    'patternPath' => __PATTERN_PATH__,
+	    'viewPath' => __VIEW_PATH__,
+	]);
+
+### Disable template wrapping for all page templates
+
+To disable page template wrapping in views by default, you can pass another parameter to Primer (`bootstrap/start.php`):
+
+	$primer = Primer::start([
+	    'basePath' => __DIR__.'/..',
+	    'templateClass' => HandlebarsTemplateEngine::class,
+
+	    'wrapTemplate' => false,
+	]);
+
 ### Events
 
 Primer is built around an Event system that makes it easier to extend. To listen to an event you simply need to call:
@@ -128,7 +153,7 @@ Primer is built around an Event system that makes it easier to extend. To listen
 	    // Do stuff here
 	});
 
-`bootstrap/start.php` contains some examples of events but for clarity here is a list:
+`bootstrap/start.php` contains some examples of events but for completeness here is a list:
 
 - #### CLI Initialisation
 
@@ -150,17 +175,9 @@ Primer is built around an Event system that makes it easier to extend. To listen
 
 - #### View Data Loaded
 	
-	Called whenever a `data.json` file is loaded. Provides a way to modify a patterns default data prior to it being merged with other context data. Can be used to pass in dynamic data to a pattern that couldn't otherwise be read from a flat `data.json` file.
+	Called whenever a `data.json` file is loaded. Can be used to pass in dynamic data to a pattern that couldn't otherwise be read from a flat `data.json` file.
 
 		ViewData::composer('elements/forms/input', function ($data) {
-		    $data->label = 'boo yah!';
-		});
-
-- #### Pattern Loaded
-	
-	Called whenever a pattern is about to be rendered.  At this point `$data` is the result of merging the patterns default data and other context data
-
-		Pattern::composer('elements/forms/input', function ($data) {
 		    $data->label = 'boo yah!';
 		});
 
