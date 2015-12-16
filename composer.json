@@ -6,18 +6,6 @@
         {
             "type": "vcs",
             "url": "git@github.com:joelambert/primer-core.git"
-        },
-        {
-            "type": "vcs",
-            "url": "git@github.com:Rareloop/primer-template-engine-handlebars.git"
-        },
-        {
-            "type": "vcs",
-            "url": "git@github.com:Rareloop/primer-template-engine-blade.git"
-        },
-        {
-            "type": "vcs",
-            "url": "git@github.com:Rareloop/primer-template-engine-twig.git"
         }
     ],
 

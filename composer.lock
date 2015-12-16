@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "04abfd3008b473e972a0a1e27db26e1e",
-    "content-hash": "2504fb30c886ed61d228f6d486957314",
+    "hash": "02f910f3c6aaa965e7d1369d37d2eee4",
+    "content-hash": "18950142ec69e747128b8b67cf96f060",
     "packages": [
         {
             "name": "altorouter/altorouter",
@@ -257,11 +257,8 @@
                     "Rareloop\\Primer\\TemplateEngine\\Handlebars\\": "src/Handlebars"
                 }
             },
+            "notification-url": "https://packagist.org/downloads/",
             "description": "Handlebars template engine for Primer",
-            "support": {
-                "source": "https://github.com/Rareloop/primer-template-engine-handlebars/tree/master",
-                "issues": "https://github.com/Rareloop/primer-template-engine-handlebars/issues"
-            },
             "time": "2015-12-16 17:01:30"
         },
         {
@@ -270,12 +267,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/Rareloop/primer-template-engine-twig.git",
-                "reference": "d9895d252aeaad1b2c2e0b56768728ec585b4d30"
+                "reference": "64a02ce355ca18cb1644241f337411a1ecd9bacd"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Rareloop/primer-template-engine-twig/zipball/d9895d252aeaad1b2c2e0b56768728ec585b4d30",
-                "reference": "d9895d252aeaad1b2c2e0b56768728ec585b4d30",
+                "url": "https://api.github.com/repos/Rareloop/primer-template-engine-twig/zipball/64a02ce355ca18cb1644241f337411a1ecd9bacd",
+                "reference": "64a02ce355ca18cb1644241f337411a1ecd9bacd",
                 "shasum": ""
             },
             "require": {
@@ -291,12 +288,12 @@
                     "Rareloop\\Primer\\TemplateEngine\\Twig\\": "src/Twig"
                 }
             },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
             "description": "Twig template engine for Primer",
-            "support": {
-                "source": "https://github.com/Rareloop/primer-template-engine-twig/tree/master",
-                "issues": "https://github.com/Rareloop/primer-template-engine-twig/issues"
-            },
-            "time": "2015-11-10 08:45:29"
+            "time": "2015-12-16 19:31:56"
         },
         {
             "name": "symfony/console",
