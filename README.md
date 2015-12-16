@@ -30,11 +30,7 @@ composer install
 
 Out of the box, Primer is setup to run from the root of your domain. You can create a virtual host within Apache or to get up and running straight away run the command:
 
-<<<<<<< HEAD
-```
-=======
 ```bash
->>>>>>> refactor
 php primer serve
 ```
 
@@ -57,9 +53,7 @@ Patterns are then further divided into groups, to allow multiple patterns to be 
 
 **Example:** For an `element` pattern named `input` inside the `forms` group, the path would be:
 
-```
-[Primer Directory]/patterns/elements/forms/input
-```
+	[Primer Directory]/patterns/elements/forms/input
 
 ### Anatomy of a pattern
 
@@ -84,45 +78,23 @@ To make an alias for a pattern with `id` `components/forms/login` you could crea
 
 Any pattern can be included within another by using the standard [Handlebars partial syntax](http://handlebarsjs.com/partials.html), e.g.
 
-<<<<<<< HEAD
-```hbs
-<div class="sub-pattern">
-	{{#inc elements/forms/input}}
-=======
 ```html
 <div class="sub-pattern">
 	{{> elements/forms/input }}
->>>>>>> refactor
 </div>
 ```
 
 Patterns can be included by the partial helper using their `id` (e.g. `{{> elements/forms/input }}`) but non Primer templates can also be loaded by passing a reference to the file without extension (e.g. `{{> elements/forms/input/test-partial }}`). 
 
-<<<<<<< HEAD
-```json
-{
-	"input": {
-		"title": "Sub Pattern Title"
-	}
-}
-```
-=======
 The context passed to the partial can be manipulated in the standard ways possible using Handlebars ([more details](http://handlebarsjs.com/partials.html#partial-context)).
 
 *Pattern Aliases can not be included using the partial syntax*
->>>>>>> refactor
 
 ## Templates
 
 Templates are just special cases of Patterns and are located in the `patterns/templates` folder. With templates, there is no requirement for grouping.
 
-<<<<<<< HEAD
-```
-/template/home
-```
-=======
 To view a particular template you would use the `template` route, e.g.
->>>>>>> refactor
 
 ```
 /template/home
@@ -132,38 +104,16 @@ Would load the template found in `patterns/templates/home`.
 
 ## Views
 
-<<<<<<< HEAD
-```hbs
-<div class="sub-pattern">
-	{{#inc elements/forms/input data="name"}}
-	{{#inc elements/forms/input data="email"}}
-</div>
-```
-=======
 Views are used to render more Primer specific aspects of the pattern library, for example the chrome surrounding patterns, groups and sections. One exception is `[Primer Directory]/views/template.hbs`, this is used as the base for all Templates that you create and is where you can add/remove assets to be loaded on each page.
->>>>>>> refactor
 
 ## Custom Views
 
-<<<<<<< HEAD
-```json
-{
-	"input:name": {
-		"title": "What is your name?",
-		"type": "text"
-	},
-
-	"input:email": {
-		"title": "What is your email?",
-		"type": "email"
-=======
 Each page Template can be wrapped in a separate View if required, to change the View add the following to the Template's `data.json` file, e.g.
 
 ```
 {
 	"primer": {
 		"view": "custom-view"
->>>>>>> refactor
 	}
 }
 ```
@@ -172,13 +122,6 @@ This would then use the view `views/custom-view.hbs` anytime the page template i
 
 It's also possible to disable the default wrapping of page Templates within a View. *This is more useful when using a template engine that supports inheritance.*
 
-<<<<<<< HEAD
-```json
-{
-	"view": "custom-view"
-}
-```
-=======
 ```
 {
 	"primer": {
@@ -190,7 +133,6 @@ It's also possible to disable the default wrapping of page Templates within a Vi
 ## Using different template engines
 
 Since `v2.0.0`, Primer supports different template engines beyond just Handlebars. This makes it easier to tailor Primer to your teams template preference and makes it easier to integrate patterns into a backend system/CMS. The following engines are currently implemented:
->>>>>>> refactor
 
 - [Handlebars](https://github.com/Rareloop/primer-template-engine-handlebars) (default)
 - [Twig](https://github.com/Rareloop/primer-template-engine-twig)
@@ -204,8 +146,6 @@ Multiple patterns/groups can be isolated, enabling a custom list of items to be 
 ```
 /patterns/elements/forms/button:elements/forms/input
 ```
-<<<<<<< HEAD
-=======
 
 ### Using different folders
 
@@ -277,7 +217,6 @@ Event::listen('eventname', function () {
 	    $data->label = 'boo yah!';
 	});
 	```
->>>>>>> refactor
 
 ### CLI
 
@@ -288,6 +227,3 @@ php primer pattern:make components/cards/news-card
 ```
     
 This would create a new pattern directory and placeholder `template.hbs` & `data.json` files.
-
-## License
-Primer is ©2015 Rareloop and is licensed under the terms of the [MIT license](http://opensource.org/licenses/MIT)
