@@ -1,2 +1,5 @@
 # Composer
 vendor/
+cache/*
+src/rareloop/Templating/Blade/Tests/primer-test/cache/*
+!src/rareloop/Templating/Blade/Tests/primer-test/cache/.gitkeep
