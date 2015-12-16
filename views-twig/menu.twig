@@ -1,0 +1,7 @@
+<nav class="primer-menu__nav">
+    <ul class="primer-menu__list">
+        {% for template in templates %}
+            <li class="primer-menu__item"><a class="primer-menu__link" href="/templates/{{ template.id }}">{{ template.title }}</a></li>
+        {% endfor %}
+    </ul>
+</nav>
