@@ -5,25 +5,40 @@ Primer is a tool to aid with the design & development of a web site/app. It help
 Primer is: 
 
 - a prototyping tool
-- a useful resource for cataloging all the individual parts that make up your style guide
+- a catalog of all the individual parts that make up your style guide
 - a way to isolate/develop a single part of the overall system
 - a centralised place for designers, developers and product owners to refer to
+- designed to be a living document, ever evolving as your site develops
+
+Primer isn't:
+
+- a front end framework
+- opinionated about your front end stack or tooling
+- a static site generator
+
+![Primer Screenshot](https://dl.dropboxusercontent.com/u/20572064/primer-screenshot.png)
 
 ## Installation
 
 To get started, simply run from the Primer folder:
 
-	$ composer install
+```bash
+composer install
+```
 
 ## Usage
 
 Out of the box, Primer is setup to run from the root of your domain. You can create a virtual host within Apache or to get up and running straight away run the command:
 
-	php primer serve
+```bash
+php primer serve
+```
 
 This will start a standalone server from which you can begin to work in. By default the server starts on port `8080`, if you would like to run from something different you can supply an additional argument:
 
-	php primer serve 8081
+```bash
+php primer serve 8081
+```
 
 ## Patterns
 
@@ -63,9 +78,11 @@ To make an alias for a pattern with `id` `components/forms/login` you could crea
 
 Any pattern can be included within another by using the standard [Handlebars partial syntax](http://handlebarsjs.com/partials.html), e.g.
 
-	<div class="sub-pattern">
-		{{> elements/forms/input }}
-	</div>
+```html
+<div class="sub-pattern">
+	{{> elements/forms/input }}
+</div>
+```
 
 Patterns can be included by the partial helper using their `id` (e.g. `{{> elements/forms/input }}`) but non Primer templates can also be loaded by passing a reference to the file without extension (e.g. `{{> elements/forms/input/test-partial }}`). 
 
@@ -79,7 +96,9 @@ Templates are just special cases of Patterns and are located in the `patterns/te
 
 To view a particular template you would use the `template` route, e.g.
 
-	/template/home
+```
+/template/home
+```
 
 Would load the template found in `patterns/templates/home`.
 
@@ -91,21 +110,25 @@ Views are used to render more Primer specific aspects of the pattern library, fo
 
 Each page Template can be wrapped in a separate View if required, to change the View add the following to the Template's `data.json` file, e.g.
 
-	{
-		"primer": {
-			"view": "custom-view"
-		}
+```
+{
+	"primer": {
+		"view": "custom-view"
 	}
+}
+```
 
 This would then use the view `views/custom-view.hbs` anytime the page template is rendered.
 
 It's also possible to disable the default wrapping of page Templates within a View. *This is more useful when using a template engine that supports inheritance.*
 
-	{
-		"primer": {
-		    "wrapTemplate": false
-		}
+```
+{
+	"primer": {
+	    "wrapTemplate": false
 	}
+}
+```
 
 ## Using different template engines
 
@@ -120,38 +143,46 @@ Since `v2.0.0`, Primer supports different template engines beyond just Handlebar
 
 Multiple patterns/groups can be isolated, enabling a custom list of items to be viewed. To do this seperate the list of pattern/group `id`'s with a `:` character.
 
-	/patterns/elements/forms/button:elements/forms/input
+```
+/patterns/elements/forms/button:elements/forms/input
+```
 
 ### Using different folders
 
 It's possible to pass more configuration parameters to Primer if you need to use non-standard folder locations (`bootstrap/start.php`):
 
-	$primer = Primer::start([
-	    'basePath' => __DIR__.'/..',
-	    'templateClass' => HandlebarsTemplateEngine::class,
+```php
+$primer = Primer::start([
+    'basePath' => __DIR__.'/..',
+    'templateClass' => HandlebarsTemplateEngine::class,
 
-	    'patternPath' => __PATTERN_PATH__,
-	    'viewPath' => __VIEW_PATH__,
-	]);
+    'patternPath' => __PATTERN_PATH__,
+    'viewPath' => __VIEW_PATH__,
+]);
+```
 
 ### Disable template wrapping for all page templates
 
 To disable page template wrapping in views by default, you can pass another parameter to Primer (`bootstrap/start.php`):
 
-	$primer = Primer::start([
-	    'basePath' => __DIR__.'/..',
-	    'templateClass' => HandlebarsTemplateEngine::class,
+```php
+$primer = Primer::start([
+    'basePath' => __DIR__.'/..',
+    'templateClass' => HandlebarsTemplateEngine::class,
 
-	    'wrapTemplate' => false,
-	]);
+    'wrapTemplate' => false,
+]);
+```
 
 ### Events
 
 Primer is built around an Event system that makes it easier to extend. To listen to an event you simply need to call:
 
-	Event::listen('eventname', function () {
-	    // Do stuff here
-	});
+```php
+Event::listen('eventname', function () {
+    // Do stuff here
+});
+```
 
 `bootstrap/start.php` contains some examples of events but for completeness here is a list:
 
@@ -159,9 +190,11 @@ Primer is built around an Event system that makes it easier to extend. To listen
 
 	Called when the CLI instance is created. This is useful for extending the CLI with custom commands.
 
-		Event::listen('cli.init', function ($cli) {
-		    $cli->add(new \App\Commands\Export);
-		});
+	```php
+	Event::listen('cli.init', function ($cli) {
+	    $cli->add(new \App\Commands\Export);
+	});
+	```
 
 	Commands need to extend Symfony's `Symfony\Component\Console\Command\Command` class.
 
@@ -169,22 +202,28 @@ Primer is built around an Event system that makes it easier to extend. To listen
 	
 	Called when the Handlebars engine is created. Useful for registering custom helpers with the Handlebars engine.
 
-		Event::listen('handlebars.init', function ($handlebars) {
+	```php
+	Event::listen('handlebars.init', function ($handlebars) {
 
-		});
+	});
+	```
 
 - #### View Data Loaded
 	
 	Called whenever a `data.json` file is loaded. Can be used to pass in dynamic data to a pattern that couldn't otherwise be read from a flat `data.json` file.
 
-		ViewData::composer('elements/forms/input', function ($data) {
-		    $data->label = 'boo yah!';
-		});
+	```php
+	ViewData::composer('elements/forms/input', function ($data) {
+	    $data->label = 'boo yah!';
+	});
+	```
 
 ### CLI
 
 There is a CLI as a convenience for creating new patterns. When in the root directory you can do the following:
 
-    php primer pattern:make components/cards/news-card
+```bash
+php primer pattern:make components/cards/news-card
+```
     
 This would create a new pattern directory and placeholder `template.hbs` & `data.json` files.
