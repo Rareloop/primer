@@ -1,19 +1,12 @@
 {
     "name": "rareloop/primer",
     "minimum-stability": "stable",
-
-    "repositories": [
-        {
-            "type": "vcs",
-            "url": "git@github.com:joelambert/primer-core.git"
-        }
-    ],
+    "license": "MIT",
 
     "require": {
         "php": ">=5.5.9",
-        "rareloop/primer-core": "dev-refactor",
-        "rareloop/primer-template-engine-twig": "dev-master",
-        "rareloop/primer-template-engine-handlebars": "dev-master",
+        "rareloop/primer-core": "2.0.*",
+        "rareloop/primer-template-engine-handlebars": "1.0.*",
         "altorouter/altorouter": "1.1.0"
     },
 
