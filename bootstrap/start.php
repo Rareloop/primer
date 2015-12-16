@@ -41,7 +41,7 @@ View::composer('pattern', function ($data, $eventId) {
 /**
  * A function that calls anytime a data for a pattern is loaded
  * Useful for dynamically generating pattern data, e.g. sprites
- * $data has not yet been merged, this is the raw output of the data.json
+ * $data is the raw output of the data.json
  */
 ViewData::composer('elements/forms/input', function ($data) {
     // $data->label = 'boo yah!';
@@ -54,16 +54,7 @@ ViewData::composer('elements/forms/input', function ($data) {
  */
 $primer = Primer::start([
     'basePath' => __DIR__.'/..',
-
-    // 'templateClass' => TwigTemplateEngine::class,
-    // 'wrapTemplate' => false,
-    // 'patternPath' => __DIR__.'/../patterns-twig',
-    // 'viewPath' => __DIR__.'/../views-twig',
-
     'templateClass' => HandlebarsTemplateEngine::class,
-    'wrapTemplate' => false,
-    'patternPath' => __DIR__.'/../patterns-hbs',
-    'viewPath' => __DIR__.'/../views-hbs',
 ]);
 
 return $primer;
