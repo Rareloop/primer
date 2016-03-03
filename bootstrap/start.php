@@ -43,7 +43,7 @@ View::composer('pattern', function ($data, $eventId) {
  * Useful for dynamically generating pattern data, e.g. sprites
  * $data is the raw output of the data.json
  */
-ViewData::composer('elements/forms/input', function ($data) {
+ViewData::composer('elements/forms/input', function ($data, $id, $originalId) {
     // $data->label = 'boo yah!';
 });
 
