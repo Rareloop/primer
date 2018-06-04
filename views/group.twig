@@ -5,8 +5,8 @@
 			<a class="primer-group__link" href="/patterns/{{id}}" title="Show this group on its own">#</a>
 		</div>
 	</div>
-	{{#if copy}}
-		<div class="primer-group__copy">{{{copy}}}</div>
-	{{/if}}
-	{{{patterns}}}
+	{% if copy %}
+		<div class="primer-group__copy">{{ copy|raw }}</div>
+	{% endif %}
+	{{ patterns|raw }}
 </div>

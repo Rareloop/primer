@@ -1,0 +1,36 @@
+<nav class="primer-menu__nav">
+    <ul class="primer-menu__list">
+
+        <li class="primer-menu__item primer-menu__top-level">
+            <a class="primer-menu__link" href="/">Home</a>
+        </li>
+
+        <li class="primer-menu__item primer-menu__top-level">
+            <a class="primer-menu__link" href="/patterns/components/">Components</a>
+            <ul class="primer-sub-menu">
+                {% for component in primer.components %}
+                    <li class="primer-menu__item"><a class="primer-menu__link" href="/patterns/components/{{ component.id }}">{{ component.title }}</a></li>
+                {% endfor %}
+            </ul>
+        </li>
+
+        <li class="primer-menu__item primer-menu__top-level">
+            <a class="primer-menu__link" href="/patterns/elements/">Elements</a>
+            <ul class="primer-sub-menu">
+                {% for element in primer.elements %}
+                <li class="primer-menu__item"><a class="primer-menu__link" href="/patterns/elements/{{ element.id }}">{{ element.title }}</a></li>
+                {% endfor %}
+            </ul>
+        </li>
+
+        <li class="primer-menu__item primer-menu__top-level">
+            <span class="primer-menu__link">Templates</span>
+            <ul class="primer-sub-menu">
+                {% for template in primer.templates %}
+                    <li class="primer-menu__item"><a class="primer-menu__link" href="/templates/{{ template.id }}">{{ template.title }}</a></li>
+                {% endfor %}
+            </ul>
+        </li>
+
+    </ul>
+</nav>

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html class="no-js">
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
@@ -7,15 +7,25 @@
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="format-detection" content="telephone=no">
-                
+
         <!-- Primer Assets -->
         <link rel="stylesheet" type="text/css" href="/vendor/rareloop/primer-core/css/primer.min.css" media="screen, handheld" />
 
     </head>
     <body class="{{ primer.bodyClass }} environment-{{ primer.environment }}">
 
-        {{! Insert the items that we have requested }}
-        {{{ primer.items }}}
+        <div class="primer-container">
+            {% include 'sidebar.twig' %}
+
+            <main class="primer-main">
+                {% block content %}
+                    {# Insert the items that we have requested #}
+                    {{ primer.items|raw }}
+                {% endblock %}
+            </main>
+        </div>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 
         <!-- Primer Assets -->
         <script src="/vendor/rareloop/primer-core/js/primer.min.js" data-manual type="text/javascript" charset="utf-8"></script>
