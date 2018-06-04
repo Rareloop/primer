@@ -1,0 +1,12 @@
+<div class="primer-section" data-id="{{ id }}">
+	<div class="primer-section__header">
+		<div class="primer-section__title">{{ title }}</div>
+		<div class="primer-section__actions">
+			<a class="primer-section__link" href="/patterns/{{ id }}" title="Show this section on its own">#</a>
+		</div>
+	</div>
+	{% if copy %}
+		<div class="primer-section__copy">{{ copy|raw }}</div>
+	{% endif %}
+	{{ patterns|raw }}
+</div>

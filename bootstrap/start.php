@@ -54,7 +54,7 @@ ViewData::composer('elements/forms/input', function ($data, $id, $originalId) {
  */
 $primer = Primer::start([
     'basePath' => __DIR__.'/..',
-    'templateClass' => HandlebarsTemplateEngine::class,
+    'templateClass' => TwigTemplateEngine::class,
 ]);
 
 return $primer;
