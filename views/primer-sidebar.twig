@@ -1,0 +1,65 @@
+{% import _self as macros %}
+
+{% macro renderItem(item, level, urlPrefix, linkNonLeafNodes = true) %}
+    {% import _self as macros %}
+
+    <li class="primer-nav-item{% if item.ancestor %} primer-nav-item--ancestor{% endif %}{% if item.current %} primer-nav-item--current{% endif %}{% if item.children|length %} primer-nav-item--has-children{% else %} primer-nav-item--leaf-node{% endif %}{% if linkNonLeafNodes %} primer-nav-item--linked-non-leaf-nodes{% endif %}{% if item.ancestor or item.current %} primer-nav-item--open{% endif %}" data-id="{{ item.id }}">
+
+        {% if item.children|length %}
+            <div class="primer-nav-item__link">
+                <span class="primer-nav-item__link-title" title="{{ item.name }}">{{ item.name }}</span>
+                {% if linkNonLeafNodes %}
+                    <a class="primer-nav-item__group-link" href="/{{ urlPrefix }}/{{ item.id }}" title="View all patterns under this group">Isolate</a>
+                {% endif %}
+            </div>
+        {% else %}
+            <a href="/{{ urlPrefix }}/{{ item.id }}" class="primer-nav-item__link"><span class="primer-nav-item__link-title" title="{{ item.name }}">{{ item.name }}</span></a>
+        {% endif %}
+
+
+        {% if item.children|length %}
+            <ul class="primer-nav-items primer-nav-items--level-{{ level + 1 }}">
+                {% for child in item.children %}
+                    {{ macros.renderItem(child, level + 1, urlPrefix) }}
+                {% endfor %}
+            </ul>
+        {% endif %}
+    </li>
+{% endmacro %}
+
+<aside class="primer-sidebar">
+    <a href="/" class="primer-logo">Home</a>
+    <div class="primer-search-container"></div>
+    <nav class="primer-sidebar__nav">
+        {% if documents.nodes|length %}
+            <div class="primer-sidebar-group primer-sidebar-group--documentation{% if documents.ancestor %} primer-sidebar-group--open{% endif %}">
+                <span class="primer-sidebar-group__title">Documentation</span>
+                <ul class="primer-nav-items">
+                    {% for document in documents.nodes %}
+                        {{ macros.renderItem(document, 0, 'docs', false) }}
+                    {% endfor %}
+                </ul>
+            </div>
+        {% endif %}
+        {% if patterns.nodes|length %}
+            <div class="primer-sidebar-group primer-sidebar-group--patterns{% if patterns.ancestor %} primer-sidebar-group--open{% endif %}">
+                <span class="primer-sidebar-group__title">Patterns</span>
+                <ul class="primer-nav-items">
+                    {% for pattern in patterns.nodes %}
+                        {{ macros.renderItem(pattern, 0, 'patterns') }}
+                    {% endfor %}
+                </ul>
+            </div>
+        {% endif %}
+        {% if templates.nodes|length %}
+            <div class="primer-sidebar-group primer-sidebar-group--templates{% if templates.ancestor %} primer-sidebar-group--open{% endif %}">
+                <span class="primer-sidebar-group__title">Templates</span>
+                <ul class="primer-nav-items">
+                    {% for template in templates.nodes %}
+                        {{ macros.renderItem(template, 0, 'templates', false) }}
+                    {% endfor %}
+                </ul>
+            </div>
+        {% endif %}
+    </nav>
+</aside>
