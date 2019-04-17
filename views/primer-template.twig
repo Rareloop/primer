@@ -14,30 +14,32 @@
         {% endif %}
     </head>
     <body{% if primer.ui %} class="primer-body{% if document %} primer-body--document{% endif %}"{% endif %}>
-        {% if primer.ui %}
-            {# Show the Primer UI #}
-            <div class="primer-container">
-                {% include 'primer-sidebar.twig' with menu only %}
-                <main class="primer-main">
-                    {% block content %}
-                        {% if document %}
-                            <div class="primer-typography">{{ document.content|raw }}</div>
-                        {% elseif patterns|length > 0 %}
-                            {% for pattern in patterns %}
-                                {% include 'primer-pattern.twig' with pattern only %}
-                            {% endfor %}
-                        {% endif %}
-                    {% endblock %}
-                </main>
-            </div>
+        {% block templateContent %}
+            {% if primer.ui %}
+                {# Show the Primer UI #}
+                <div class="primer-container">
+                    {% include 'primer-sidebar.twig' with menu only %}
+                    <main class="primer-main">
+                        {% block content %}
+                            {% if document %}
+                                <div class="primer-typography">{{ document.content|raw }}</div>
+                            {% elseif patterns|length > 0 %}
+                                {% for pattern in patterns %}
+                                    {% include 'primer-pattern.twig' with pattern only %}
+                                {% endfor %}
+                            {% endif %}
+                        {% endblock %}
+                    </main>
+                </div>
 
-            <!-- Primer Assets -->
-            <script src="/assets/js/primer.min.js" data-manual type="text/javascript" charset="utf-8"></script>
-        {% else %}
-            {# Show just the requested patterns, without any Primer #}
-            {% for pattern in patterns %}
-                {% include pattern.id with pattern.data only %}
-            {% endfor %}
-        {% endif %}
+                <!-- Primer Assets -->
+                <script src="/assets/js/primer.min.js" data-manual type="text/javascript" charset="utf-8"></script>
+            {% else %}
+                {# Show just the requested patterns, without any Primer #}
+                {% for pattern in patterns %}
+                    {% include pattern.id with pattern.data only %}
+                {% endfor %}
+            {% endif %}
+        {% endblock %}
     </body>
 </html>
