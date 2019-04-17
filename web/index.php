@@ -3,6 +3,7 @@
 require __DIR__ . '/../vendor/autoload.php';
 
 use DI\Container;
+use Gajus\Dindent\Indenter;
 use Rareloop\Primer\DataParsers\JSONDataParser;
 use Rareloop\Primer\DocumentParsers\ChainDocumentParser;
 use Rareloop\Primer\DocumentParsers\MarkdownDocumentParser;
@@ -19,6 +20,7 @@ use Rareloop\Router\Router;
 use Twig\Environment;
 use Twig\Loader\ChainLoader;
 use Twig\Loader\FilesystemLoader;
+use Twig\TwigFilter;
 use Zend\Diactoros\ServerRequest;
 use Zend\Diactoros\ServerRequestFactory;
 use function Http\Response\send;
@@ -56,6 +58,14 @@ $twig = new Environment(
         'debug' => true,
     ]
 );
+
+/**
+ * Add a filter to ensure we get sane HTML layout out
+ */
+$twig->addFilter(new TwigFilter('dindent', function ($html) {
+    $indenter = new Indenter();
+    return $indenter->indent($html);
+}));
 
 /**
  * Create a Document Provider that will parse YAML, Twig and Markdown

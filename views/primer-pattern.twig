@@ -1,4 +1,5 @@
 {% set html %}{% include id with data only %}{% endset %}
+{% set html = html|trim|dindent %}
 {% set url = '/patterns/' ~ id %}
 {% set urlWithState = url %}
 {% if state != 'default' %}
@@ -24,7 +25,7 @@
         </div>
     </div>
     <div class="primer-pattern__content">
-        {{ html|trim|raw }}
+        {{ html|raw }}
     </div>
     <div class="primer-tabs">
         <ul class="primer-tabs-toc" role="tablist">
