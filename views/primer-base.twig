@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html{% if primer.ui %} class="primer-html"{% endif %}>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>{% if primer.title %}{{ primer.title }} - {% endif %}Primer</title>
+        <meta name="description" content="{{ primer.description }}">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        {% if primer.ui %}
+            <!-- Primer CSS Assets -->
+            <link href="https://fonts.googleapis.com/css?family=Roboto:400,400i,500,500i" rel="stylesheet">
+            <link rel="stylesheet" type="text/css" href="/assets/css/primer.min.css" media="screen, handheld" />
+        {% endif %}
+    </head>
+    <body{% if primer.ui %} class="primer-body{% if document %} primer-body--document{% endif %}"{% endif %}>
+        {% block templateContent %}
+            <p>Sorry, no content</p>
+        {% endblock %}
+
+        {% if primer.ui %}
+            <!-- Primer JS Assets -->
+            <script src="/assets/js/primer.min.js" data-manual type="text/javascript" charset="utf-8"></script>
+        {% endif %}
+    </body>
+</html>

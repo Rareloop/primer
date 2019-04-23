@@ -1,45 +1,26 @@
-<!DOCTYPE html>
-<html{% if primer.ui %} class="primer-html"{% endif %}>
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <title>{% if primer.title %}{{ primer.title }} - {% endif %}Primer</title>
-        <meta name="description" content="{{ primer.description }}">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+{% extends "primer-base.twig" %}
 
-        {% if primer.ui %}
-            <!-- Primer Assets -->
-            <link href="https://fonts.googleapis.com/css?family=Roboto:400,400i,500,500i" rel="stylesheet">
-            <link rel="stylesheet" type="text/css" href="/assets/css/primer.min.css" media="screen, handheld" />
-        {% endif %}
-    </head>
-    <body{% if primer.ui %} class="primer-body{% if document %} primer-body--document{% endif %}"{% endif %}>
-        {% block templateContent %}
-            {% if primer.ui %}
-                {# Show the Primer UI #}
-                <div class="primer-container">
-                    {% include 'primer-sidebar.twig' with menu only %}
-                    <main class="primer-main">
-                        {% block content %}
-                            {% if document %}
-                                <div class="primer-typography">{{ document.content|raw }}</div>
-                            {% elseif patterns|length > 0 %}
-                                {% for pattern in patterns %}
-                                    {% include 'primer-pattern.twig' with pattern only %}
-                                {% endfor %}
-                            {% endif %}
-                        {% endblock %}
-                    </main>
-                </div>
-
-                <!-- Primer Assets -->
-                <script src="/assets/js/primer.min.js" data-manual type="text/javascript" charset="utf-8"></script>
-            {% else %}
-                {# Show just the requested patterns, without any Primer #}
-                {% for pattern in patterns %}
-                    {% include pattern.id with pattern.data only %}
-                {% endfor %}
-            {% endif %}
-        {% endblock %}
-    </body>
-</html>
+{% block templateContent %}
+    {% if primer.ui %}
+        {# Show the Primer UI #}
+        <div class="primer-container">
+            {% include 'primer-sidebar.twig' with menu only %}
+            <main class="primer-main">
+                {% block content %}
+                    {% if document %}
+                        <div class="primer-typography">{{ document.content|raw }}</div>
+                    {% elseif patterns|length > 0 %}
+                        {% for pattern in patterns %}
+                            {% include 'primer-pattern.twig' with pattern only %}
+                        {% endfor %}
+                    {% endif %}
+                {% endblock %}
+            </main>
+        </div>
+    {% else %}
+        {# Show just the requested patterns, without any Primer #}
+        {% for pattern in patterns %}
+            {% include pattern.id with pattern.data only %}
+        {% endfor %}
+    {% endif %}
+{% endblock %}
