@@ -54,7 +54,7 @@
         <div class="primer-tab" id="{{ id }}:data" role="tabpanel" aria-labelledby="{{ id }}:tab-title-data">
             <div class="primer-tab__title" id="{{ id }}:tab-title-data">Data</div>
             <div class="primer-tab__content">
-                <pre class="primer-tab__pre"><code class="primer-tab__code language-json">{{ data|json_encode(constant('JSON_PRETTY_PRINT')) }}</code></pre>
+                <pre class="primer-tab__pre"><code class="primer-tab__code language-json">{{ data|json_encode(constant('JSON_PRETTY_PRINT') b-or constant('JSON_UNESCAPED_SLASHES')) }}</code></pre>
             </div>
         </div>
     </div>
