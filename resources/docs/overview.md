@@ -10,4 +10,3 @@ Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta autem exercitat
 
 > Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum quos expedita voluptatum eveniet quas voluptatibus odio dolore ullam. Voluptate accusantium a corrupti soluta veritatis odio inventore qui porro, explicabo adipisci.
 
-{% include 'primer-pattern.twig' with { id: "components/common/footer", title: "Footer", data:[], state: "default", states: ['default'], template: "<p>footer</p>" } %}
