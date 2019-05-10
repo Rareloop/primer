@@ -3,6 +3,7 @@
 namespace App\Controllers;
 
 use App\Responses\Error404Response;
+use Rareloop\Primer\Exceptions\DocumentNotFoundException;
 use Rareloop\Primer\Exceptions\PatternNotFoundException;
 use Rareloop\Primer\Primer;
 use Rareloop\Router\Router;
