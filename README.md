@@ -22,9 +22,9 @@ And then open the following URL in your browser `http://localhost:1234`.
 
 Primer has three separate sections:
 
-1. (Documents)[#documents] - A place to store the written documentation for your Design System.
-2. (Patterns)[#patterns] - A Pattern Library that catalogues all the components within your system.
-3. (Templates)[#templates] - A way to view the various Page Templates available in your system.
+1. [Documents](#documents) - A place to store the written documentation for your Design System.
+2. [Patterns](#patterns) - A Pattern Library that catalogues all the components within your system.
+3. [Templates](#templates) - A way to view the various Page Templates available in your system.
 
 ## Patterns
 
