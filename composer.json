@@ -5,11 +5,13 @@
         "symfony/finder": "^4.2",
         "twig/twig": "^2.6",
         "rareloop/primer-core": "dev-dev@dev",
+        "rareloop/primer-frontend": "dev-master@dev",
         "rareloop/router": "^4.2",
         "http-interop/response-sender": "^1.0",
         "zendframework/zend-diactoros": "^1.4",
         "php-di/php-di": "^6.0",
-        "gajus/dindent": "^2.0"
+        "gajus/dindent": "^2.0",
+        "symfony/debug": "^4.2"
     },
     "autoload": {
         "psr-4": {
@@ -17,6 +19,18 @@
         }
     },
     "scripts": {
-        "copy-assets": "cp -ap ./vendor/rareloop/primer-core/frontend/dist/ ./web/assets"
+        "copy-assets": "cp -ap ./vendor/rareloop/primer-frontend/frontend/dist/ ./web/assets",
+        "copy-patterns": "cp -ap ./vendor/rareloop/primer-frontend/twig/patterns ./resources",
+        "copy-templates": "cp -ap ./vendor/rareloop/primer-frontend/twig/templates ./resources",
+        "copy-twig-base": "cp ./vendor/rareloop/primer-frontend/twig/views/primer-base.twig ./views",
+        "setup": [
+            "@copy-assets",
+            "@copy-patterns",
+            "@copy-templates",
+            "@copy-twig-base"
+        ],
+        "post-create-project-cmd": [
+            "@setup"
+        ]
     }
 }
