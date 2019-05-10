@@ -2,6 +2,8 @@
 
 require __DIR__ . '/../vendor/autoload.php';
 
+use App\Responses\Error404Response;
+use App\Responses\Error500Response;
 use DI\Container;
 use Gajus\Dindent\Indenter;
 use Rareloop\Primer\DataParsers\JSONDataParser;
@@ -17,6 +19,7 @@ use Rareloop\Primer\Twig\MarkdownYamlTwigDocumentParser;
 use Rareloop\Primer\Twig\PrimerLoader;
 use Rareloop\Primer\Twig\TwigTemplateRenderer;
 use Rareloop\Router\Router;
+use Symfony\Component\Debug\Debug;
 use Twig\Environment;
 use Twig\Loader\ChainLoader;
 use Twig\Loader\FilesystemLoader;
@@ -26,22 +29,42 @@ use Zend\Diactoros\ServerRequestFactory;
 use function Http\Response\send;
 
 /**
- * Get the load paths from Config
+ * Load Config
  */
+$appConfig = require __DIR__ . '/../config/app.php';
 $patternLoadPaths = require __DIR__ . '/../config/paths.patterns.php';
 $templateLoadPaths = require __DIR__ . '/../config/paths.templates.php';
 $documentLoadPaths = require __DIR__ . '/../config/paths.docs.php';
+$viewLoadPaths = require __DIR__ . '/../config/paths.views.php';
 
 /**
- * Creat the app container
+ * Setup exception handling
+ */
+if ($appConfig['debug'] ?? false) {
+    // Pretty print exceptions
+    Debug::enable();
+} else {
+    // Catch exceptions and output our error template
+    set_exception_handler(function ($e) use ($viewLoadPaths) {
+        error_log($e->getMessage());
+        $twig = new Environment(new FilesystemLoader($viewLoadPaths));
+        send(new Error404Response($twig->render('primer-500.twig')));
+    });
+}
+
+/**
+ * Create the app container
  */
 $container = new Container;
 
 /**
- * Create the Pattern & Template Providers
+ * Create the Pattern & Template Providers and bind into the Container
  */
 $patternsProvider = new FileSystemPatternProvider($patternLoadPaths, 'twig', new JSONDataParser);
 $templatesProvider = new FileSystemPatternProvider($templateLoadPaths, 'twig', new JSONDataParser);
+
+$container->set('patternsProvider', $patternsProvider);
+$container->set('templatesProvider', $templatesProvider);
 
 /**
  * Create a Twig instance that makes use of the Pattern & Template Providers
@@ -49,18 +72,18 @@ $templatesProvider = new FileSystemPatternProvider($templateLoadPaths, 'twig', n
 $twig = new Environment(
     new ChainLoader(
         [
-            new FilesystemLoader([ __DIR__ . '/../views' ]),
+            new FilesystemLoader($viewLoadPaths),
             new PrimerLoader($patternsProvider),
             new PrimerLoader($templatesProvider),
         ]
     ),
     [
-        'debug' => true,
+        'debug' => $appConfig['debug'] ?? false,
     ]
 );
 
 /**
- * Add a filter to ensure we get sane HTML layout out
+ * Add a filter to ensure we get sane HTML layout output
  */
 $twig->addFilter(new TwigFilter('dindent', function ($html) {
     $indenter = new Indenter();
@@ -108,14 +131,18 @@ require __DIR__ . '/../routes.php';
 /**
  * Handle the request
  */
-send(
-    $router->match(
-        ServerRequestFactory::fromGlobals(
-            $_SERVER,
-            $_GET,
-            $_POST,
-            $_COOKIE,
-            $_FILES
-        )
+$response = $router->match(
+    ServerRequestFactory::fromGlobals(
+        $_SERVER,
+        $_GET,
+        $_POST,
+        $_COOKIE,
+        $_FILES
     )
 );
+
+if ($response instanceof Error404Response) {
+    $response = new Error404Response($twig->render('primer-404.twig'));
+}
+
+send($response);
