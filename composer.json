@@ -23,6 +23,7 @@
         "copy-patterns": "cp -ap ./vendor/rareloop/primer-frontend/twig/patterns ./resources",
         "copy-templates": "cp -ap ./vendor/rareloop/primer-frontend/twig/templates ./resources",
         "copy-twig-base": "cp ./vendor/rareloop/primer-frontend/twig/views/primer-base.twig ./views",
+	"server": "App\\ComposerScripts\\Server::run",
         "setup": [
             "@copy-assets",
             "@copy-patterns",

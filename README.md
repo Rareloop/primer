@@ -14,9 +14,13 @@ To create a new Primer project run the following command:
 ## Usage
 The easiest way to get up and running is to use the inbuilt PHP Standalone Server:
 
-`php -S localhost:1234 -t web`
+`composer server`
 
-And then open the following URL in your browser `http://localhost:1234`.
+And then open the following URL in your browser `http://localhost:8080`.
+
+If you need to specify the port you can pass this as an argument to the command:
+
+`composer server 1234`
 
 ## Getting Started
 
