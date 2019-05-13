@@ -48,7 +48,7 @@ if ($appConfig['debug'] ?? false) {
     set_exception_handler(function ($e) use ($viewLoadPaths) {
         error_log($e->getMessage());
         $twig = new Environment(new FilesystemLoader($viewLoadPaths));
-        send(new Error404Response($twig->render('primer-500.twig')));
+        send(new Error500Response($twig->render('primer-500.twig')));
     });
 }
 
