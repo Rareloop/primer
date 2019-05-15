@@ -20,13 +20,14 @@ class Server
 
         echo "\n" . static::buildHeader($port) . "\n\n";
 
-        system('php -S 0.0.0.0:' . $port . ' -t web');
+        chdir(__DIR__ . '/../../web');
+        system('php -S 0.0.0.0:' . $port . ' ../server.php');
     }
 
     private static function buildHeader($port) {
         $lines = [];
 
-        $lines[] = 'Primer Server';
+        $lines[] = 'Primer Development Server';
         $lines[] = '';
         $lines[] = 'Listening on http://localhost:' . $port;
         $lines[] = 'Press Ctrl-C to quit';

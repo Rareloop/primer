@@ -19,13 +19,11 @@
         }
     },
     "scripts": {
-        "copy-assets": "cp -ap ./vendor/rareloop/primer-frontend/frontend/dist/ ./web/assets",
         "copy-patterns": "cp -ap ./vendor/rareloop/primer-frontend/twig/patterns ./resources",
         "copy-templates": "cp -ap ./vendor/rareloop/primer-frontend/twig/templates ./resources",
         "copy-twig-base": "cp ./vendor/rareloop/primer-frontend/twig/views/primer-base.twig ./views",
-	"server": "App\\ComposerScripts\\Server::run",
+        "server": "App\\ComposerScripts\\Server::run",
         "setup": [
-            "@copy-assets",
             "@copy-patterns",
             "@copy-templates",
             "@copy-twig-base"

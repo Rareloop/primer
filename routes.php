@@ -32,3 +32,12 @@ $router
  * Handle root
  */
 $router->get('/', 'App\Controllers\RootController@show');
+
+/**
+ * Handle Primer Frontend Assets
+ */
+$router->group('assets/primer', function ($group) {
+    $group->get('css/{file}', 'App\Controllers\AssetsController@stylesheet')->where('file', '.+');
+    $group->get('js/{file}', 'App\Controllers\AssetsController@javascript')->where('file', '.+');
+    $group->get('img/{file}', 'App\Controllers\AssetsController@image')->where('file', '.+');
+});
