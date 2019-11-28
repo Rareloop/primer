@@ -9,7 +9,7 @@ Primer is an extensible Design System/Pattern Library written in PHP. By default
 ## Installation
 To create a new Primer project run the following command:
 
-`composer create-project rareloop/primer:dev-dev my-primer-folder --stability=dev --remove-vcs`
+`composer create-project rareloop/primer my-primer-folder --remove-vcs`
 
 ## Usage
 The easiest way to get up and running is to use the inbuilt PHP Standalone Server:
